@@ -2,7 +2,9 @@
   <div class="sign-up">
     <h1>Sign up</h1>
     <!-- <RegistrationsIndex /> -->
-    <!-- <p>{{ ApiUtilities }}</p> -->
+    <input>
+    <input>
+    <button @click="signUp">Sign Up</button>
   </div>
 </template>
 
@@ -16,8 +18,10 @@ export default {
   components: {
     // RegistrationsIndex
   },
-  methods () {
-    // methods
+  methods: {
+    signUp () {
+      console.log('call API')
+    }
   },
   mounted () {
   }
