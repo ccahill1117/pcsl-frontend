@@ -2,8 +2,10 @@
   <div class="sign-up">
     <h1>Sign up</h1>
     <!-- <RegistrationsIndex /> -->
-    <input>
-    <input>
+    <label>email</label>
+    <input :value="email">
+    <label>password</label>
+    <input :value="password">
     <button @click="signUp">Sign Up</button>
   </div>
 </template>
@@ -17,6 +19,12 @@ export default {
   name: 'SignUpView',
   components: {
     // RegistrationsIndex
+  },
+  data () {
+    return {
+      email: '',
+      password: ''
+    }
   },
   methods: {
     signUp () {
