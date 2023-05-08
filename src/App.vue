@@ -3,7 +3,8 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
     <router-link to="/registrations">Reg</router-link> |
-    <router-link to="/sign_up">SignUp</router-link>
+    <router-link to="/sign_up">SignUp</router-link> |
+    <router-link to="/login">Login</router-link>
   </nav>
   <img alt="Vue logo" src="./assets/header_bkgd_1100x45.png">
   <router-view/>
