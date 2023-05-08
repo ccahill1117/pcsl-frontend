@@ -1,13 +1,20 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/registrations">Reg</router-link> |
-    <router-link to="/sign_up">SignUp</router-link> |
-    <router-link to="/login">Login</router-link>
+
   </nav>
   <img alt="Vue logo" src="./assets/header_bkgd_1100x45.png">
-  <router-view/>
+  <div class="column-container">
+    <div class="left-nav">
+      <p><router-link to="/">Home</router-link></p>
+      <p><router-link to="/about">About</router-link></p>
+      <p><router-link to="/registrations">Reg</router-link></p>
+      <p><router-link to="/sign_up">SignUp</router-link></p>
+      <p><router-link to="/login">Login</router-link></p>
+    </div>
+    <div class="content-col">
+      <router-view/>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -24,7 +31,16 @@ console.log('env', process.env)
   text-align: center;
   color: white;
 }
-
+.column-container {
+  display: flex;
+  padding: 25px;
+}
+.left-nav {
+  padding: 15px;
+}
+.content-col {
+  padding: 15px;
+}
 body {
   background-color: black;
 }

@@ -3,7 +3,7 @@
     <p>
       Let's put table of registrations here as they come in
     </p>
-    <p>drag and drop would be nice too</p>
+    <p>drag and drop to reorder</p>
   </div>
 </template>
 
