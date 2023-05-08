@@ -1,17 +1,17 @@
 <template>
-  <div class="login">
-    <h1>Login</h1>
+  <div class="sign-up">
+    <h1>Sign up</h1>
     <!-- <RegistrationsIndex /> -->
     <div>
       <label>email</label>
-      <input :value="email">
+      <input v-model="email">
     </div>
     <div>
       <label>password</label>
-      <input :value="password">
+      <input v-model="password">
     </div>
     <div>
-      <button @click="signUp">Login</button>
+      <button @click="signUp">Sign up</button>
     </div>
   </div>
 </template>
@@ -34,7 +34,7 @@ export default {
   },
   methods: {
     signUp () {
-      console.log('call API')
+      console.log('call API', this.email)
     }
   },
   mounted () {

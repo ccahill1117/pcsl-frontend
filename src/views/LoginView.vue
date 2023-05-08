@@ -1,17 +1,17 @@
 <template>
-  <div class="sign-up">
-    <h1>Sign up</h1>
+  <div class="login">
+    <h1>Login</h1>
     <!-- <RegistrationsIndex /> -->
     <div>
       <label>email</label>
-      <input :value="email">
+      <input v-model="email">
     </div>
     <div>
       <label>password</label>
-      <input :value="password">
+      <input v-model="password">
     </div>
     <div>
-      <button @click="signUp">Sign Up</button>
+      <button @click="login">Login</button>
     </div>
   </div>
 </template>
@@ -34,8 +34,11 @@ export default {
     }
   },
   methods: {
-    signUp () {
-      axios.get(process.env.VUE_APP_API_URL)
+    login () {
+      console.log(this.email, this.password)
+      const user = { user: { email: this.email, password: this.password } }
+      axios.post(process.env.VUE_APP_API_URL + '/login', user)
+        .then(response => console.log('resp', response))
     }
   },
   mounted () {
