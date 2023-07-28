@@ -36,8 +36,22 @@ export default {
       password: 'password'
     }
   },
+  // using computed to get from the store
+  computed: {
+    user () {
+      return this.$store.state
+    }
+  },
   methods: {
     ...mapMutations(['setUser', 'setToken']),
+
+    setUserAndToken (response) {
+      console.log('resp', response)
+      this.setUser(response.data.data.email)
+      this.setToken(response.headers.authorization)
+      // this.loginUser(response.data.data.email, response.headers.authorization)
+    },
+
     async login () {
       console.log(this.email, this.password)
       const user = { user: { email: this.email, password: this.password } }
@@ -48,12 +62,7 @@ export default {
         )
     },
     getCurrentUser () {
-      console.log('user')
-    },
-    setUserAndToken (response) {
-      console.log('resp', response)
-      this.setUser(response.data.data.email)
-      this.setToken(response.headers.authorization)
+      console.log('user', this.user)
     }
   },
   mounted () {
