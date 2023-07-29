@@ -6,10 +6,10 @@
 
 <script>
 export default {
-  name: 'Match',
+  name: 'MatchResult',
   props: {
-    registrations: Array,
-    someProp: String
+    // registrations: Array,
+    // someProp: String
   }
 }
 </script>
