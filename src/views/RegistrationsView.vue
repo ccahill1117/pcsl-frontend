@@ -21,7 +21,7 @@ export default {
   },
   mounted () {
     console.log('apiUtilities', ApiUtilities)
-    console.log('reg index mounted')
+    // console.log('reg index mounted')
   }
 }
 </script>

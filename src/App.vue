@@ -43,7 +43,7 @@ console.log('env', process.env)
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: white;
+  /* color: white; */
 }
 .column-container {
   display: inline-block;
@@ -68,10 +68,10 @@ console.log('env', process.env)
   }
 }
 .content-col {
-
   padding: 15px;
   background-color: #e7c9a9;
-  width: 100%;
+  /* width: 100%; */
+  flex: 1 auto;
 }
 body {
   background-color: black;
