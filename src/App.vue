@@ -2,17 +2,31 @@
   <nav>
 
   </nav>
-  <img alt="Vue logo" src="./assets/header_bkgd_1100x45.png">
   <div class="column-container">
-    <div class="left-nav">
-      <p><router-link to="/">Home</router-link></p>
-      <p><router-link to="/about">About</router-link></p>
-      <p><router-link to="/registrations">Reg</router-link></p>
-      <p><router-link to="/sign_up">SignUp</router-link></p>
-      <p><router-link to="/login">Login</router-link></p>
-    </div>
-    <div class="content-col">
-      <router-view/>
+      <div class="left-nav-item">
+        <img alt="Vue logo" src="./assets/header_bkgd_1100x45.png">
+      </div>
+    <div class="nav-content-container">
+      <div class="left-nav">
+        <div class="left-nav-item">
+          <p><router-link to="/">Home</router-link></p>
+        </div>
+        <div class="left-nav-item">
+          <p><router-link to="/about">About</router-link></p>
+        </div>
+        <div class="left-nav-item">
+          <p><router-link to="/registrations">Reg</router-link></p>
+        </div>
+        <div class="left-nav-item">
+          <p><router-link to="/sign_up">SignUp</router-link></p>
+        </div>
+        <div class="left-nav-item">
+          <p><router-link to="/login">Login</router-link></p>
+        </div>
+      </div>
+      <div class="content-col">
+        <router-view/>
+      </div>
     </div>
   </div>
 </template>
@@ -33,10 +47,20 @@ console.log('env', process.env)
 }
 .column-container {
   display: flex;
-  padding: 25px;
+  flex-direction: column;
+  /* padding: 25px; */
+}
+.nav-content-container {
+  display: flex;
+  border: 1px solid red;
 }
 .left-nav {
   padding: 15px;
+}
+.left-nav-item {
+  display: flex;
+  border: 1px solid #ccc;
+
 }
 .content-col {
   padding: 15px;

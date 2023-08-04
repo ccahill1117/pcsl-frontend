@@ -33,7 +33,7 @@ export default {
   data () {
     return {
       email: 'chris@test.com',
-      password: 'password'
+      password: 'password123'
     }
   },
   // using computed to get from the store
