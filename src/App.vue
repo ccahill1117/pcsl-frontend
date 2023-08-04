@@ -9,7 +9,7 @@
     <div class="nav-content-container">
       <div class="left-nav">
         <div class="left-nav-item">
-          <p><router-link to="/">Home</router-link></p>
+          <p><router-link to="/" class="router-link">Home</router-link></p>
         </div>
         <div class="left-nav-item">
           <p><router-link to="/about">About</router-link></p>
@@ -49,18 +49,23 @@ console.log('env', process.env)
   display: inline-block;
   flex-direction: column;
   /* padding: 25px; */
-  border: 1px solid green;
+  /* border: 1px solid green; */
 
 }
 .nav-content-container {
   display: flex;
 }
 .left-nav {
-  padding: 15px;
+  width: 100px;
 }
 .left-nav-item {
   display: flex;
-
+  background-image: url("./assets/navBG.png");
+  color: yellow;
+  & > .router-link {
+    display: block;
+    color: yellow;
+  }
 }
 .content-col {
 

@@ -16,6 +16,9 @@
   <div class="current-user">
     <button @click="getCurrentUser">get current user</button>
   </div>
+  <div class="fetch-user">
+    <button @click="fetchCurrentUser">fetch current user</button>
+  </div>
 </template>
 
 <script>
@@ -61,9 +64,25 @@ export default {
           this.setUserAndToken(response)
         )
     },
+
     getCurrentUser () {
       console.log('user', this.user)
+    },
+
+    async fetchCurrentUser () {
+      console.log('token', this.user.token)
+      await axios.get(process.env.VUE_APP_API_URL + '/current_user',
+        {
+          headers: {
+            Authorization: this.user.token
+          }
+        }
+      )
+        .then(resp =>
+          console.log('resp', resp)
+        )
     }
+
   },
   mounted () {
   }
