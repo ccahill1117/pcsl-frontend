@@ -9,19 +9,25 @@
     <div class="nav-content-container">
       <div class="left-nav">
         <div class="left-nav-item">
-          <p><router-link to="/" class="router-link">Home</router-link></p>
+          <p><router-link to="/" class="router-link-class">Home</router-link></p>
         </div>
         <div class="left-nav-item">
-          <p><router-link to="/about">About</router-link></p>
+          <p><router-link to="/about" class="router-link-class">About</router-link></p>
         </div>
         <div class="left-nav-item">
-          <p><router-link to="/registrations">Reg</router-link></p>
+          <p><router-link to="/registrations" class="router-link-class">Reg</router-link></p>
         </div>
         <div class="left-nav-item">
-          <p><router-link to="/sign_up">SignUp</router-link></p>
+          <p><router-link to="/sign_up" class="router-link-class">SignUp</router-link></p>
         </div>
         <div class="left-nav-item">
-          <p><router-link to="/login">Login</router-link></p>
+          <p><router-link to="/login" class="router-link-class">Login</router-link></p>
+        </div>
+        <div class="left-nav-item">
+          <p><router-link to="/scores" class="router-link-class">Scores</router-link></p>
+        </div>
+        <div class="left-nav-item">
+          <p><router-link to="/scores_entry" class="router-link-class">Scores Entry</router-link></p>
         </div>
       </div>
       <div class="content-col">
@@ -62,10 +68,11 @@ console.log('env', process.env)
   display: flex;
   background-image: url("./assets/navBG.png");
   color: yellow;
-  & > .router-link {
-    display: block;
-    color: yellow;
-  }
+}
+
+.router-link-class {
+  /* display: block; */
+  color: yellow;
 }
 .content-col {
   padding: 15px;
