@@ -1,6 +1,8 @@
 <template>
   <div class="matchForm">
-    <p>matchForm</p>
+    <div>
+
+    </div>
   </div>
 </template>
 
@@ -16,7 +18,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-a {
-  color: #42b983;
-}
+  matchForm {
+    border: thick double #32a1ce
+  }
 </style>
