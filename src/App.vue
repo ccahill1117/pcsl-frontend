@@ -46,24 +46,27 @@ console.log('env', process.env)
   color: white;
 }
 .column-container {
-  display: flex;
+  display: inline-block;
   flex-direction: column;
   /* padding: 25px; */
+  border: 1px solid green;
+
 }
 .nav-content-container {
   display: flex;
-  border: 1px solid red;
 }
 .left-nav {
   padding: 15px;
 }
 .left-nav-item {
   display: flex;
-  border: 1px solid #ccc;
 
 }
 .content-col {
+
   padding: 15px;
+  background-color: #e7c9a9;
+  width: 100%;
 }
 body {
   background-color: black;
@@ -77,7 +80,4 @@ nav a {
   color: #2c3e50;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
