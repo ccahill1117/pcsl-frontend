@@ -12,7 +12,7 @@
     <div>
       <label>club</label>
       <select v-model="selected">
-        <option v-for="(item, key) in clubs" :value="key">
+        <option v-bind="(item, key) in clubs" :value="key">
           {{item?.name}}
         </option>
       </select>
@@ -39,7 +39,6 @@ export default {
       // sign up data
       firstName: '',
       lastName: '',
-      email: '',
       address1: '',
       address2: '',
       state: '',
@@ -61,10 +60,9 @@ export default {
     },
     async getClubs () {
       // console.log('token', this.user.token)
-      const key = { key: 'club' }
+      // const key = { key: 'club' }
       await axios.get(process.env.VUE_APP_API_URL + '/clubs')
-        .then(resp =>
-          this.clubs = resp.data
+        .then(resp => { this.clubs = resp.data }
         )
     }
   },
