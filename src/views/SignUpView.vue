@@ -1,7 +1,6 @@
 <template>
   <div class="sign-up">
     <h1>Sign up</h1>
-    <!-- <RegistrationsIndex /> -->
     <div>
       <label>email</label>
       <input v-model="firstName">
@@ -45,6 +44,7 @@ export default {
       address2: '',
       state: '',
       zipCode: '',
+      email: '',
       phone: '',
       gender: '',
       dateOfBirth: '',

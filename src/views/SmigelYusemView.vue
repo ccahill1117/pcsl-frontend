@@ -1,6 +1,6 @@
 <template>
   <div class="dev">
-    <h1>dev</h1>
+    <h1>SmigelYusem</h1>
     <!-- <MatchForm />
     <MatchResult /> -->
   </div>
@@ -11,7 +11,7 @@
 // import MatchResult from '@/components/MatchResult.vue'
 
 export default {
-  name: 'HomeView',
+  name: 'SmigelYusemView',
   components: {
     // MatchResult,
     // MatchForm

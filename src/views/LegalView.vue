@@ -11,7 +11,7 @@
 // import MatchResult from '@/components/MatchResult.vue'
 
 export default {
-  name: 'HomeView',
+  name: 'LegalView',
   components: {
     // MatchResult,
     // MatchForm

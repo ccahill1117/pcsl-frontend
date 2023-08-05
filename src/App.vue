@@ -29,6 +29,12 @@
         <div class="left-nav-item">
           <p><router-link to="/scores_entry" class="router-link-class">Scores Entry</router-link></p>
         </div>
+        <div class="left-nav-item">
+          <p><router-link to="/legal" class="router-link-class">Legal and Waiver</router-link></p>
+        </div>
+        <div class="left-nav-item">
+          <p><router-link to="/smigel_yusem" class="router-link-class">Smigel/Yusem Award</router-link></p>
+        </div>
       </div>
       <div class="content-col">
         <router-view/>
