@@ -28,16 +28,26 @@ export default {
   },
   data () {
     return {
+      firstName: '',
+      lastName: '',
       email: '',
-      password: ''
+
     }
   },
   methods: {
     signUp () {
       console.log('call API', this.email)
+    },
+    async getClubs () {
+      // console.log('token', this.user.token)
+      await axios.get(process.env.VUE_APP_API_URL + '/dropdown_options')
+        .then(resp =>
+          console.log('resp', resp)
+        )
     }
   },
   mounted () {
+    this.getClubs()
   }
 }
 </script>
