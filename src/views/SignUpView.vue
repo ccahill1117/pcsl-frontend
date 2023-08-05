@@ -41,6 +41,14 @@ export default {
       firstName: '',
       lastName: '',
       email: '',
+      address1: '',
+      address2: '',
+      state: '',
+      zipCode: '',
+      phone: '',
+      gender: '',
+      dateOfBirth: '',
+      usSquashId: '',
       selected: null,
 
       // other
