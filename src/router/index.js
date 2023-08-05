@@ -36,6 +36,16 @@ const routes = [
     path: '/scores_entry',
     name: 'scores entry',
     component: () => import(/* webpackChunkName: "about" */ '../views/ScoresEntryView.vue')
+  },
+  {
+    path: '/smigel_yusem',
+    name: 'smigel yusem award',
+    component: () => import(/* webpackChunkName: "about" */ '../views/SmigelYusemView.vue')
+  },
+  {
+    path: '/legal',
+    name: 'legal and waiver',
+    component: () => import(/* webpackChunkName: "about" */ '../views/LegalView.vue')
   }
 ]
 
