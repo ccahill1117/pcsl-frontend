@@ -20,6 +20,7 @@
 // @ is an alias to /src
 // import RegistrationsIndex from '@/components/RegistrationsIndex.vue'
 // import { ApiUtilities } from '../../utils/ApiUtilities.js'
+import axios from 'axios'
 
 export default {
   name: 'SignUpView',
@@ -30,8 +31,7 @@ export default {
     return {
       firstName: '',
       lastName: '',
-      email: '',
-
+      email: ''
     }
   },
   methods: {
@@ -40,7 +40,8 @@ export default {
     },
     async getClubs () {
       // console.log('token', this.user.token)
-      await axios.get(process.env.VUE_APP_API_URL + '/dropdown_options')
+      const key = { key: 'club' }
+      await axios.post(process.env.VUE_APP_API_URL + '/dropdown_options', key)
         .then(resp =>
           console.log('resp', resp)
         )
