@@ -47,6 +47,11 @@
 
 console.log('env', process.env)
 
+export default {
+  // watch () {
+  //   console.log('mounted')
+  // }
+}
 </script>
 
 <style>
