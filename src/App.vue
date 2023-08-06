@@ -47,11 +47,11 @@
 
 console.log('env', process.env)
 
+// import { ref, watch } from 'vue'
+
 export default {
-  // watch () {
-  //   console.log('mounted')
-  // }
 }
+
 </script>
 
 <style>
