@@ -50,6 +50,12 @@ console.log('env', process.env)
 // import { ref, watch } from 'vue'
 
 export default {
+  watch: {
+    $route: function (to, from) {
+      // function here check if logged in ?
+      console.log('route')
+    }
+  }
 }
 
 </script>
