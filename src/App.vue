@@ -41,6 +41,9 @@
       </div>
     </div>
   </div>
+  <div class="footer-contact">
+    <p>Website 2.0 - Christopher Cahill</p>
+  </div>
 </template>
 
 <script>
@@ -72,7 +75,7 @@ export default {
   display: inline-block;
   flex-direction: column;
   /* padding: 25px; */
-  /* border: 1px solid green; */
+  border: 1px solid green;
 
 }
 .nav-content-container {
@@ -107,6 +110,14 @@ nav {
 nav a {
   font-weight: bold;
   color: #2c3e50;
+}
+
+.footer-contact {
+  float: right;
+  color: white;
+  font-size: 12px;
+  /* border: 1px solid green; */
+  padding-right: 50px;
 }
 
 </style>

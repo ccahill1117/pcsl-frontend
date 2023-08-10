@@ -5,6 +5,8 @@
 
     <labe>firstName</labe>
     <input type="text" v-model="firstName"/>
+    <labe>lastName</labe>
+    <input type="text" v-model="lastName"/>
 
   </div>
 </template>
@@ -12,6 +14,7 @@
 <script>
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue'
+import axios from 'axios'
 
 export default {
   name: 'UserProfileView',
@@ -41,17 +44,27 @@ export default {
   mounted () {
     this.getUser()
   },
+  computed: {
+    user () {
+      return this.$store.state
+    }
+  },
   methods: {
     signUp () {
       console.log('call API', this.email)
     },
     async getUser () {
-      console.log('hey get da user')
-      // console.log('token', this.user.token)
-      // const key = { key: 'club' }
-      // await axios.get(process.env.VUE_APP_API_URL + '/user')
-      //   .then(resp => { this.clubs = resp.data }
-      //   )
+      console.log('token', this.user.token)
+      await axios.get(process.env.VUE_APP_API_URL + '/current_user',
+        {
+          headers: {
+            Authorization: this.user.token
+          }
+        }
+      )
+        .then(resp =>
+          console.log('resp', resp)
+        )
     }
   }
 }

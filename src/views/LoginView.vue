@@ -35,8 +35,8 @@ export default {
   },
   data () {
     return {
-      email: 'chris@test.com',
-      password: 'password'
+      email: '',
+      password: ''
     }
   },
   // using computed to get from the store
