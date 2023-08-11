@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img src=".././assets/logo_racquet_shadow.png" alt="pcsl logo">
+    <img src=".././assets/logo_racquet_shadow2.png" alt="pcsl logo">
     <p>
       <i>"'A somewhat motley collection of squash enthusiasts,
 loosely organized in a weekly competitive and social league format'"</i>

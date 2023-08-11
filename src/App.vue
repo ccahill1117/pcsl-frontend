@@ -75,7 +75,6 @@ export default {
   display: inline-block;
   flex-direction: column;
   /* padding: 25px; */
-  border: 1px solid green;
 
 }
 .nav-content-container {

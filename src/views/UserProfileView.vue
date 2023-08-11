@@ -3,10 +3,14 @@
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <h3>user profile</h3>
 
-    <labe>firstName</labe>
+    <!-- <div v-if="">
+
+    </div> -->
+
+    <!-- <labe>firstName</labe>
     <input type="text" v-model="firstName"/>
     <labe>lastName</labe>
-    <input type="text" v-model="lastName"/>
+    <input type="text" v-model="lastName"/> -->
 
   </div>
 </template>
@@ -38,7 +42,10 @@ export default {
       selected: null,
 
       // other
-      clubs: []
+      clubs: [],
+
+      // response
+      currentUserResponse: ''
     }
   },
   mounted () {
@@ -50,6 +57,12 @@ export default {
     }
   },
   methods: {
+    renderProfile () {
+      return (
+        <div><p>hi</p></div>
+      )
+    },
+
     signUp () {
       console.log('call API', this.email)
     },
@@ -62,6 +75,7 @@ export default {
           }
         }
       )
+      // .then(resp => { this.clubs = resp.data }
         .then(resp =>
           console.log('resp', resp)
         )
