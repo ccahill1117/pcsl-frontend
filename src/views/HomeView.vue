@@ -4,8 +4,8 @@
     <p>
       <i>"'A somewhat motley collection of squash enthusiasts,
 loosely organized in a weekly competitive and social league format'"</i>
-
     </p>
+    <p>Tony Humpage - Founder</p>
   </div>
 </template>
 

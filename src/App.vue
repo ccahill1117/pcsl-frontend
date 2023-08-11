@@ -3,36 +3,41 @@
 
   </nav>
   <div class="column-container">
-      <div class="left-nav-item">
-        <img alt="Vue logo" src="./assets/header_bkgd_1100x45.png">
+    <div class="logo-login-container">
+      <div class="logo-container">
+        <img alt="Vue logo" src="./assets/header_bkgd_small.jpg">
       </div>
+      <div class="login-container">
+        <p>here login</p>
+      </div>
+    </div>
     <div class="nav-content-container">
       <div class="left-nav">
-        <div class="left-nav-item">
+        <div class="nav-item">
           <p><router-link to="/" class="router-link-class">Home</router-link></p>
         </div>
-        <div class="left-nav-item">
+        <div class="nav-item">
           <p><router-link to="/about" class="router-link-class">About</router-link></p>
         </div>
-        <div class="left-nav-item">
+        <div class="nav-item">
           <p><router-link to="/registrations" class="router-link-class">Reg</router-link></p>
         </div>
-        <div class="left-nav-item">
+        <div class="nav-item">
           <p><router-link to="/sign_up" class="router-link-class">SignUp</router-link></p>
         </div>
-        <div class="left-nav-item">
+        <div class="nav-item">
           <p><router-link to="/login" class="router-link-class">Login</router-link></p>
         </div>
-        <div class="left-nav-item">
+        <div class="nav-item">
           <p><router-link to="/scores" class="router-link-class">Scores</router-link></p>
         </div>
-        <div class="left-nav-item">
+        <div class="nav-item">
           <p><router-link to="/scores_entry" class="router-link-class">Scores Entry</router-link></p>
         </div>
-        <div class="left-nav-item">
+        <div class="nav-item">
           <p><router-link to="/legal" class="router-link-class">Legal and Waiver</router-link></p>
         </div>
-        <div class="left-nav-item">
+        <div class="nav-item">
           <p><router-link to="/smigel_yusem" class="router-link-class">Smigel/Yusem Award</router-link></p>
         </div>
       </div>
@@ -48,15 +53,73 @@
 
 <script>
 
+import axios from 'axios'
+
 console.log('env', process.env)
-
-// import { ref, watch } from 'vue'
-
 export default {
   watch: {
     $route: function (to, from) {
       // function here check if logged in ?
       console.log('route')
+    }
+  },
+  data () {
+    return {
+      // sign up data
+      firstName: '',
+      lastName: '',
+      address1: '',
+      address2: '',
+      state: '',
+      zipCode: '',
+      email: '',
+      phone: '',
+      gender: '',
+      dateOfBirth: '',
+      usSquashId: '',
+      selected: null,
+
+      // other
+      clubs: [],
+
+      // response
+      currentUserResponse: ''
+    }
+  },
+  mounted () {
+    this.getUser()
+  },
+  computed: {
+    user () {
+      return this.$store.state
+    }
+  },
+  methods: {
+    renderProfile () {
+      return (
+        <div><p>hi</p></div>
+      )
+    },
+
+    signUp () {
+      console.log('call API', this.email)
+    },
+    async getUser () {
+      console.log('token', this.user.token)
+      await axios.get(process.env.VUE_APP_API_URL + '/current_user',
+        {
+          headers: {
+            Authorization: this.user.token
+          }
+        }
+      )
+      // .then(resp => { this.clubs = resp.data }
+        .then(resp =>
+          console.log('resp', resp)
+        )
+        .catch(err =>
+          console.log('error', err)
+        )
     }
   }
 }
@@ -69,13 +132,26 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  /* color: white; */
+}
+.logo-container {
+  display: flex;
+  align-self: flex-end;
+}
+.login-container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  /* border: 1px solid red; */
+  width: 100%;
 }
 .column-container {
   display: inline-block;
   flex-direction: column;
-  /* padding: 25px; */
-
+}
+.logo-login-container {
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid green; */
 }
 .nav-content-container {
   display: flex;
@@ -83,7 +159,7 @@ export default {
 .left-nav {
   width: 100px;
 }
-.left-nav-item {
+.nav-item {
   display: flex;
   background-image: url("./assets/navBG.png");
   color: yellow;
