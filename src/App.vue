@@ -1,53 +1,57 @@
 <template>
   <nav>
-
   </nav>
-  <div class="column-container">
-    <div class="logo-login-container">
-      <div class="logo-container">
-        <img alt="Vue logo" src="./assets/header_bkgd_small.jpg">
+  <div class="app-footer-container">
+    <div class="column-container">
+      <div class="logo-login-container">
+        <div class="logo-container">
+          <img alt="Vue logo" src="./assets/header_bkgd_small.jpg">
+        </div>
+        <div class="login-container">
+          <div v-if="currentUserResponse == 401">
+            <p>you're logged out</p>
+          </div>
+        </div>
       </div>
-      <div class="login-container">
-        <p>here login</p>
+      <div class="nav-content-container">
+        <div class="left-nav">
+          <div class="nav-item">
+            <p><router-link to="/" class="router-link-class">Home</router-link></p>
+          </div>
+          <div class="nav-item">
+            <p><router-link to="/about" class="router-link-class">About</router-link></p>
+          </div>
+          <div class="nav-item">
+            <p><router-link to="/registrations" class="router-link-class">Reg</router-link></p>
+          </div>
+          <div class="nav-item">
+            <p><router-link to="/sign_up" class="router-link-class">SignUp</router-link></p>
+          </div>
+          <div class="nav-item">
+            <p><router-link to="/login" class="router-link-class">Login</router-link></p>
+          </div>
+          <div class="nav-item">
+            <p><router-link to="/scores" class="router-link-class">Scores</router-link></p>
+          </div>
+          <div class="nav-item">
+            <p><router-link to="/scores_entry" class="router-link-class">Scores Entry</router-link></p>
+          </div>
+          <div class="nav-item">
+            <p><router-link to="/legal" class="router-link-class">Legal and Waiver</router-link></p>
+          </div>
+          <div class="nav-item">
+            <p><router-link to="/smigel_yusem" class="router-link-class">Smigel/Yusem Award</router-link></p>
+          </div>
+        </div>
+        <div class="content-col">
+          <router-view/>
+        </div>
       </div>
     </div>
-    <div class="nav-content-container">
-      <div class="left-nav">
-        <div class="nav-item">
-          <p><router-link to="/" class="router-link-class">Home</router-link></p>
-        </div>
-        <div class="nav-item">
-          <p><router-link to="/about" class="router-link-class">About</router-link></p>
-        </div>
-        <div class="nav-item">
-          <p><router-link to="/registrations" class="router-link-class">Reg</router-link></p>
-        </div>
-        <div class="nav-item">
-          <p><router-link to="/sign_up" class="router-link-class">SignUp</router-link></p>
-        </div>
-        <div class="nav-item">
-          <p><router-link to="/login" class="router-link-class">Login</router-link></p>
-        </div>
-        <div class="nav-item">
-          <p><router-link to="/scores" class="router-link-class">Scores</router-link></p>
-        </div>
-        <div class="nav-item">
-          <p><router-link to="/scores_entry" class="router-link-class">Scores Entry</router-link></p>
-        </div>
-        <div class="nav-item">
-          <p><router-link to="/legal" class="router-link-class">Legal and Waiver</router-link></p>
-        </div>
-        <div class="nav-item">
-          <p><router-link to="/smigel_yusem" class="router-link-class">Smigel/Yusem Award</router-link></p>
-        </div>
-      </div>
-      <div class="content-col">
-        <router-view/>
-      </div>
+    <div class="footer-contact">
+      <p>Website 2.0 - Christopher Cahill</p>
     </div>
-  </div>
-  <div class="footer-contact">
-    <p>Website 2.0 - Christopher Cahill</p>
+
   </div>
 </template>
 
@@ -58,9 +62,9 @@ import axios from 'axios'
 console.log('env', process.env)
 export default {
   watch: {
-    $route: function (to, from) {
-      // function here check if logged in ?
-      console.log('route')
+    $route (to, from) {
+      console.log('route changed')
+      this.getUser()
     }
   },
   data () {
@@ -87,7 +91,7 @@ export default {
     }
   },
   mounted () {
-    this.getUser()
+    // this.getUser()
   },
   computed: {
     user () {
@@ -117,9 +121,7 @@ export default {
         .then(resp =>
           console.log('resp', resp)
         )
-        .catch(err =>
-          console.log('error', err)
-        )
+        .catch(err => { this.currentUserResponse = err?.response?.status })
     }
   }
 }
@@ -133,16 +135,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 }
-.logo-container {
-  display: flex;
-  align-self: flex-end;
-}
 .login-container {
   display: flex;
   flex-direction: column;
   color: white;
-  /* border: 1px solid red; */
-  width: 100%;
+  width: 500px;
 }
 .column-container {
   display: inline-block;
@@ -151,7 +148,6 @@ export default {
 .logo-login-container {
   display: flex;
   flex-direction: row;
-  /* border: 1px solid green; */
 }
 .nav-content-container {
   display: flex;
@@ -166,13 +162,11 @@ export default {
 }
 
 .router-link-class {
-  /* display: block; */
   color: yellow;
 }
 .content-col {
   padding: 15px;
   background-color: #e7c9a9;
-  /* width: 100%; */
   flex: 1 auto;
 }
 body {
@@ -188,11 +182,10 @@ nav a {
 }
 
 .footer-contact {
-  float: right;
   color: white;
   font-size: 12px;
-  /* border: 1px solid green; */
   padding-right: 50px;
+  text-align: center;
 }
 
 </style>
