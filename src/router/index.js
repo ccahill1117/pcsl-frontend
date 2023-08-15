@@ -51,6 +51,11 @@ const routes = [
     path: '/user_profile',
     name: 'user profile',
     component: () => import(/* webpackChunkName: "about" */ '../views/UserProfileView.vue')
+  },
+  {
+    path: '/rules',
+    name: 'rules',
+    component: () => import(/* webpackChunkName: "about" */ '../views/RulesView.vue')
   }
 ]
 

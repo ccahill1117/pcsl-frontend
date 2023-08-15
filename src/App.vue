@@ -11,6 +11,9 @@
           <div v-if="currentUserResponse == 401">
             <p>you're logged out</p>
           </div>
+          <div v-if="currentUserResponse == 200">
+            <p>{{this.user.user}} you're logged in</p>
+          </div>
         </div>
       </div>
       <div class="nav-content-container">
@@ -42,6 +45,9 @@
           <div class="nav-item">
             <p><router-link to="/smigel_yusem" class="router-link-class">Smigel/Yusem Award</router-link></p>
           </div>
+          <div class="nav-item">
+            <p><router-link to="/rules" class="router-link-class">Rules</router-link></p>
+          </div>
         </div>
         <div class="content-col">
           <router-view/>
@@ -69,29 +75,13 @@ export default {
   },
   data () {
     return {
-      // sign up data
-      firstName: '',
-      lastName: '',
-      address1: '',
-      address2: '',
-      state: '',
-      zipCode: '',
-      email: '',
-      phone: '',
-      gender: '',
-      dateOfBirth: '',
-      usSquashId: '',
-      selected: null,
-
-      // other
-      clubs: [],
-
       // response
-      currentUserResponse: ''
+      currentUserResponse: null
     }
   },
   mounted () {
     // this.getUser()
+    console.log('user', this.user?.user)
   },
   computed: {
     user () {
@@ -105,9 +95,6 @@ export default {
       )
     },
 
-    signUp () {
-      console.log('call API', this.email)
-    },
     async getUser () {
       console.log('token', this.user.token)
       await axios.get(process.env.VUE_APP_API_URL + '/current_user',
@@ -118,8 +105,8 @@ export default {
         }
       )
       // .then(resp => { this.clubs = resp.data }
-        .then(resp =>
-          console.log('resp', resp)
+        .then(resp => { this.currentUserResponse = resp?.status }
+
         )
         .catch(err => { this.currentUserResponse = err?.response?.status })
     }
