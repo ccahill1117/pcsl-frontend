@@ -8,8 +8,16 @@
           <img alt="Vue logo" src="./assets/header_bkgd_small.jpg">
         </div>
         <div class="login-container">
-          <div v-if="currentUserResponse == 401">
+          <div class="login-container-logged-out" v-if="currentUserResponse == 401">
             <p>you're logged out</p>
+            <div class="login-container-logged-out-item">
+              <label>email</label>
+              <input v-model="email">
+            </div>
+            <div class="login-container-logged-out-item">
+              <label>password</label>
+              <input v-model="password">
+            </div>
           </div>
           <div v-if="currentUserResponse == 200">
             <p>{{this.user.user}} you're logged in</p>
@@ -64,6 +72,7 @@
 <script>
 
 import axios from 'axios'
+import { mapMutations } from 'vuex'
 
 console.log('env', process.env)
 export default {
@@ -89,6 +98,8 @@ export default {
     }
   },
   methods: {
+    ...mapMutations(['setUser', 'setToken']),
+
     renderProfile () {
       return (
         <div><p>hi</p></div>
@@ -109,6 +120,23 @@ export default {
 
         )
         .catch(err => { this.currentUserResponse = err?.response?.status })
+    },
+
+    setUserAndToken (response) {
+      console.log('resp', response)
+      this.setUser(response.data.data.email)
+      this.setToken(response.headers.authorization)
+      // this.loginUser(response.data.data.email, response.headers.authorization)
+    },
+
+    async login () {
+      console.log(this.email, this.password)
+      const user = { user: { email: this.email, password: this.password } }
+      // const config = { withCredentials: true }
+      await axios.post(process.env.VUE_APP_API_URL + '/login', user)
+        .then(response =>
+          this.setUserAndToken(response)
+        )
     }
   }
 }
@@ -127,6 +155,13 @@ export default {
   flex-direction: column;
   color: white;
   width: 500px;
+}
+.login-container-logged-out {
+  display: inline-block;
+  flex-direction: row;
+}
+.login-container-logged-out-item {
+  border: 1px green solid;
 }
 .column-container {
   display: inline-block;
