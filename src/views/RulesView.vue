@@ -130,7 +130,7 @@
 
 <p><strong><a ref="4_1">4.1</a></strong> Within <strong>72 hours</strong> of the completion of the week's matches, the winning team captain must submit the match scores via the League website <a href='login_scores.php'>scores entry page</a>. If a team captain is unavailable to report scores, it is the captain's responsibility to delegate reporting to another team member. Scores from the final week of FAll or Winter season play must be submitted at the season ending party.</p>
 
-<div><h3><a id="five"></a>5. GENERAL CONDUCT<a @click="scrollMeTo('top" title="top"><img src="graphics/icon_up_triangle.gif" class="navicon"></a></h3></div>
+<div><h3><a id="five"></a>5. GENERAL CONDUCT<a @click="scrollMeTo('top')" title="top"><img src="graphics/icon_up_triangle.gif" class="navicon"></a></h3></div>
 
 <p><strong>5.1</strong> City league participants are strongly encouraged to play with appropriate "Squash Etiquette". This includes sportsmanship on the court and an ongoing concern for your opponent's and your own safety throughout the game. Do not argue with the referee. Call your own doubtful shots down and respect club property. Play your best and win through the quality of your game.</p>
 
@@ -152,11 +152,11 @@
 <li>Was the obstructed player in a position to play a winning return ? If so, then it's a STROKE, otherwise it's just a LET.</li>
 </ul>
 
-<div><h3><a id="six"></a>6. WINNERS<a @click="scrollMeTo('top" title="top"><img src="graphics/icon_up_triangle.gif" class="navicon"></a></h3></div>
+<div><h3><a id="six"></a>6. WINNERS<a @click="scrollMeTo('top')" title="top"><img src="graphics/icon_up_triangle.gif" class="navicon"></a></h3></div>
 
 <p><strong>6.1</strong> Prizes of squash equipment will be awarded to the first, second and third place teams in each division.</p>
 
-<div><h3><a id="seven"></a>7. CAPTAINS & GROUP LEADERS<a @click="scrollMeTo('top" title="top"><img src="graphics/icon_up_triangle.gif" class="navicon"></a></h3></div>
+<div><h3><a id="seven"></a>7. CAPTAINS & GROUP LEADERS<a @click="scrollMeTo('top')" title="top"><img src="graphics/icon_up_triangle.gif" class="navicon"></a></h3></div>
 <p><strong>7.1</strong> In <strong>Fall</strong> and <strong>Winter</strong> leagues each team is managed by a captain. A captain's responsibilities include the following:</p>
 <ul>
 <li>Picking the team members from a pool of registrants before the league season begins</li>
@@ -172,10 +172,10 @@
 </ul>
 <p>In <strong>Summer</strong> league each group is managed by a group leader. Responsibilities are essentially the same as a captain's, except that there are no teams to pick or scores to submit.</p>
 
-<div><h3><a id="eight"></a>8. CLUB ETIQUETTE & PROTOCOLS<a @click="scrollMeTo('top" title="top"><img src="graphics/icon_up_triangle.gif" class="navicon"></a></h3></div>
+<div><h3><a id="eight"></a>8. CLUB ETIQUETTE & PROTOCOLS<a @click="scrollMeTo('top')" title="top"><img src="graphics/icon_up_triangle.gif" class="navicon"></a></h3></div>
 <p>A smile and saying thank you to club staff for supporting City League go a long way to showing our appreciation for the use of their squash courts and facilities. Feel free to do both !</p>
 
-<div><h3 ref="rules_lac">Lloyd Athletic Club (LAC)<span class="follower1"><a @click="scrollMeTo('irections.php">Directions</a></span><a @click="scrollMeTo('top" title="top"><img src="graphics/icon_up_triangle.gif" class="navicon3"></a>
+<div><h3 ref="rules_lac">Lloyd Athletic Club (LAC)<span class="follower1"><a href='directions.php'>Directions</a></span><a @click="scrollMeTo('top')" title="top"><img src="graphics/icon_up_triangle.gif" class="navicon3"></a>
 </h3></div>
 <ul>
 <li>Arrive no earlier than <strong>30 minutes</strong> before your scheduled play time</li>
@@ -188,13 +188,13 @@
 <li>Club may require a player to show photo ID.</li>
 </ul>
 
-<div><h3 id="rules_mac">Multnomah Athletic Club (MAC)<span class="follower1"><a @click="scrollMeTo('irections.php">Directions</a></span><a @click="scrollMeTo('top" title="top"><img src="graphics/icon_up_triangle.gif" class="navicon3"></a></h3></div>
+<div><h3 id="rules_mac">Multnomah Athletic Club (MAC)<span class="follower1"><a href='directions.php'>Directions</a></span><a @click="scrollMeTo('top')" title="top"><img src="graphics/icon_up_triangle.gif" class="navicon3"></a></h3></div>
 <ul>
   <li>Arrive no earlier than <strong>30 minutes</strong> before your scheduled play time</li>
-<li>From 6/1/22, only MAC members have access to the parking structure to the south of the club building. Parking at the Events & Catering parking annex to the west of the club building on 20th & Salmon is available is available to MAC members at no charge. All others are required to pay <strong>$10</strong> at the kiosk for a one time pass. Check out the <a @click="scrollMeTo('df/mac_events_catering_parking_map.pdf" target="_blank">area map</a></li>
-<li>On street parking in surrounding permit controlled areas is free for 90 minutes <strong>6:00pm - 10:00pm Mon. - Fri.</strong> and at other times as posted <a @click="scrollMeTo('mages/2022_0615_mac_onstreet_parking.jpg" target="_blank">here</a></li>
+<li>From 6/1/22, only MAC members have access to the parking structure to the south of the club building. Parking at the Events & Catering parking annex to the west of the club building on 20th & Salmon is available is available to MAC members at no charge. All others are required to pay <strong>$10</strong> at the kiosk for a one time pass. Check out the <a href='pdf/mac_events_catering_parking_map.pdf' target="_blank">area map</a></li>
+<li>On street parking in surrounding permit controlled areas is free for 90 minutes <strong>6:00pm - 10:00pm Mon. - Fri.</strong> and at other times as posted <a href='images/2022_0615_mac_onstreet_parking.jpg' target="_blank">here</a></li>
 <li>Enter the club at the main entrance and turn left. You will need a QR code on your phone or clearly printed on paper to enter and exit through the speed gates. Hold the code in front of the sensor on the front of the speedgate cabinet approximately 6 inches away and at an angle of 45 degrees. Make sure all the QR code is visible to the sensor. If the code is approved, green lights will light in the walkway. Enter the walkway to make the gates open. The QR code will only work during the allotted time period and the gate is monitored by security cameras.</li>
-<li>If you are registered with the League and <strong>have not received a QR code</strong> for the League season, contact <a @click="scrollMeTo('ailto:whergeth@themac.com">Werner Hergeth</a>, Squash Head Pro / Manager at MAC, to apply for one. He will need your email address to send it to you</li>
+<li>If you are registered with the League and <strong>have not received a QR code</strong> for the League season, contact <a href='mailto:whergeth@themac.com'>Werner Hergeth</a>, Squash Head Pro / Manager at MAC, to apply for one. He will need your email address to send it to you</li>
 <li>Use the <strong>locker room</strong> on the west end of the building two floors down from the lobby which is on the same level as the squash court gallery. Counter staff will give you directions</li>
   <li>Club may require a player to show photo ID.</li>
 <li>MAC provides <strong>towels</strong> in the locker rooms. A <strong>limited number of locker cabinets</strong> which accept a padlock are available</li>
@@ -202,7 +202,7 @@
 <li>Only play on courts shown on the current League season schedule</li>
 </ul>
 
-<div><h3 id="rules_reed">Reed College<span class="follower1"><a @click="scrollMeTo('irections.php">Directions</a></span><a @click="scrollMeTo('top" title="top"><img src="graphics/icon_up_triangle.gif" class="navicon3"></a></h3></div>
+<div><h3 id="rules_reed">Reed College<span class="follower1"><a href='directions.php'>Directions</a></span><a @click="scrollMeTo('top')" title="top"><img src="graphics/icon_up_triangle.gif" class="navicon3"></a></h3></div>
 <ul>
 <li>Arrive no earlier than <strong>30 minutes</strong> before your scheduled play time</li>
 <li>Entry to the parking lot is on Botsford Drive which is signposted on the east side of SE 28th Avenue. As you approach the buildings, the parking lot is to the right.</li>
@@ -210,7 +210,7 @@
 <li>You will need to provide your own pad- or combination lock to secure your locker. Access to locker rooms and showers is provided. Towels are available at the check-in desk.</li>
     <li>From the locker rooms, turn left and walk along the corridor. Turn right up a short flight of stairs. The squash courts are to your right.</li>
 <li>Reed workout facilities are NOT available to City League players. Please make sure you restrict your visit to the locker rooms and squash courts</li>
-<li>Reed's three first class squash courts will be available for play. See the <a @click="scrollMeTo('irections.php#reed">maps & directions</a> and <a @click="scrollMeTo('ttp://www.portlandsquash.org/images/reed_campus_map.jpg">campus map</a> pages showing the location of the squash courts</li>
+<li>Reed's three first class squash courts will be available for play. See the <a href='directions.php#reed'>maps & directions</a> and <a href='http://www.portlandsquash.org/images/reed_campus_map.jpg'>campus map</a> pages showing the location of the squash courts</li>
 </ul>
 
 </div><!-- END column1_1 -->
