@@ -208,7 +208,7 @@
 <li>Entry to the parking lot is on Botsford Drive which is signposted on the east side of SE 28th Avenue. As you approach the buildings, the parking lot is to the right.</li>
 <li>Walking east on Botsford with the Athletic Center to your right, turn right down the concrete steps to basement level and check in at the cage office. Tell staff that you are there to play City League Squash.</li>
 <li>You will need to provide your own pad- or combination lock to secure your locker. Access to locker rooms and showers is provided. Towels are available at the check-in desk.</li>
-    <li>From the locker rooms, turn left and walk along the corridor. Turn right up a short flight of stairs. The squash courts are to your right.</li>
+<li>From the locker rooms, turn left and walk along the corridor. Turn right up a short flight of stairs. The squash courts are to your right.</li>
 <li>Reed workout facilities are NOT available to City League players. Please make sure you restrict your visit to the locker rooms and squash courts</li>
 <li>Reed's three first class squash courts will be available for play. See the <a href='directions.php#reed'>maps & directions</a> and <a href='http://www.portlandsquash.org/images/reed_campus_map.jpg'>campus map</a> pages showing the location of the squash courts</li>
 </ul>

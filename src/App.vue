@@ -154,7 +154,7 @@ export default {
   display: flex;
   flex-direction: column;
   color: white;
-  width: 500px;
+  width: 100%;
 }
 .login-container-logged-out {
   display: inline-block;
@@ -170,6 +170,8 @@ export default {
 .logo-login-container {
   display: flex;
   flex-direction: row;
+  border: 3px red solid;
+  /* width: 1200px; */
 }
 .nav-content-container {
   display: flex;
@@ -190,6 +192,7 @@ export default {
   padding: 15px;
   background-color: #e7c9a9;
   flex: 1 auto;
+  width: 1000px;
 }
 body {
   background-color: black;
