@@ -6,9 +6,9 @@
 <h3 class = "prot">RECENT CHANGES</h3>
 <ul>
   <li><a @click="scrollMeTo('3_2_2')">3.2.2</a> Club guest fees.</li>
-  <li><a href="#3_2_3">3.2.3</a> Late (catchup) matches disallowed per pre-2020 ruling.</li>
-  <li><a href="#4_1">4.1</a> Match result reporting deadline revised to 72 hours. Clarification added.</li>
-  <li><a href="#rules_lac">LAC</a> Club Etiquette & Protocols: LAC guest pass requirement for matches played outside of schedule.</li>
+  <li><a @click="scrollMeTo('3_2_3')">3.2.3</a> Late (catchup) matches disallowed per pre-2020 ruling.</li>
+  <li><a @click="scrollMeTo('4_1')">4.1</a> Match result reporting deadline revised to 72 hours. Clarification added.</li>
+  <li><a  @click="scrollMeTo('rules_lac')">LAC</a> Club Etiquette & Protocols: LAC guest pass requirement for matches played outside of schedule.</li>
 </ul>
 
 <ol style="font-weight: bold; color: #990000">
@@ -103,7 +103,7 @@
 <p><strong>3.2.1</strong> Matches may be played <strong>in advance</strong> of the scheduled match date by mutual agreement of the two players involved. The results of such matches must be reported to the team captains immediately after play. For scoring purposes, the match will count towards the "full team turnout bonus". If an earlier match time cannot be agreed upon, then the match should be played at the scheduled time.</p>
 <!-- gotta use refs -->
 <p ref="3_2_2"><strong>3.2.2</strong> Players must <strong>pay all appropriate club guest fees</strong> for rescheduled matches at a club where they are not a member. As a matter of courtesy, the player requesting that a match be rescheduled should pay the required guest fees. If possible, matches should be rescheduled at off peak times to minimize court pressure at the clubs. See also <a href="#eight">CLUB ETIQUETTE & PROTOCOLS</a>. Clubs may require a player to show photo ID.</p>
-<p><strong><a id="3_2_3">3.2.3</a></strong> Schedule matches <strong>may not be played after the scheduled date of play</strong>. If such a match is played, then the match will not count for scoring purposes, and both teams will lose their "full team turnout bonus".</p>
+<p><strong><a ref="3_2_3">3.2.3</a></strong> Schedule matches <strong>may not be played after the scheduled date of play</strong>. If such a match is played, then the match will not count for scoring purposes, and both teams will lose their "full team turnout bonus".</p>
 <p><strong>3.3</strong> Substitutions:</p>
 <p><strong>3.3.1</strong> If a player cannot arrange to play the match early, that player must find a substitute of similar standard, arrange for the substitute to play at the scheduled time and location, and inform the captain of the substitution. All substitutions arranged in this way will count towards the "full team turnout bonus".</p>
 <p><strong>3.3.2</strong> A substitute must be of approximately the same or lower standard than the player to be replaced if the match is to count for scoring purposes.  If the substitute is of a higher standard, then the match is a default and the match point will be awarded against the substitute.  Whatever the relative standard of the substitute, the match will always count towards the "full team turnout bonus".</p>
@@ -128,7 +128,7 @@
 
 <div><h3><a id="four"></a>4. REPORTING OF MATCH RESULTS<a href="#top" title="top"><img src="graphics/icon_up_triangle.gif" class="navicon"></a></h3></div>
 
-<p><strong><a id="4_1">4.1</a></strong> Within <strong>72 hours</strong> of the completion of the week's matches, the winning team captain must submit the match scores via the League website <a href="login_scores.php">scores entry page</a>. If a team captain is unavailable to report scores, it is the captain's responsibility to delegate reporting to another team member. Scores from the final week of FAll or Winter season play must be submitted at the season ending party.</p>
+<p><strong><a ref="4_1">4.1</a></strong> Within <strong>72 hours</strong> of the completion of the week's matches, the winning team captain must submit the match scores via the League website <a href="login_scores.php">scores entry page</a>. If a team captain is unavailable to report scores, it is the captain's responsibility to delegate reporting to another team member. Scores from the final week of FAll or Winter season play must be submitted at the season ending party.</p>
 
 <div><h3><a id="five"></a>5. GENERAL CONDUCT<a href="#top" title="top"><img src="graphics/icon_up_triangle.gif" class="navicon"></a></h3></div>
 
@@ -175,7 +175,7 @@
 <div><h3><a id="eight"></a>8. CLUB ETIQUETTE & PROTOCOLS<a href="#top" title="top"><img src="graphics/icon_up_triangle.gif" class="navicon"></a></h3></div>
 <p>A smile and saying thank you to club staff for supporting City League go a long way to showing our appreciation for the use of their squash courts and facilities. Feel free to do both !</p>
 
-<div><h3 id="rules_lac">Lloyd Athletic Club (LAC)<span class="follower1"><a href="directions.php">Directions</a></span><a href="#top" title="top"><img src="graphics/icon_up_triangle.gif" class="navicon3"></a>
+<div><h3 ref="rules_lac">Lloyd Athletic Club (LAC)<span class="follower1"><a href="directions.php">Directions</a></span><a href="#top" title="top"><img src="graphics/icon_up_triangle.gif" class="navicon3"></a>
 </h3></div>
 <ul>
 <li>Arrive no earlier than <strong>30 minutes</strong> before your scheduled play time</li>
@@ -224,7 +224,6 @@ export default {
   name: 'RulesView',
   components: {
     // MatchResult,
-    // MatchForm
   },
   methods: {
     scrollMeTo (refName) {
@@ -235,3 +234,11 @@ export default {
   }
 }
 </script>
+
+<style>
+a {
+  color: blue;
+  text-decoration: underline;
+}
+
+</style>
