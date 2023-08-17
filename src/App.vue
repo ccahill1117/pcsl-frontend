@@ -18,9 +18,15 @@
               <label>password</label>
               <input v-model="password">
             </div>
+            <div>
+              <button @click="login">Login</button>
+            </div>
           </div>
           <div v-if="currentUserResponse == 200">
             <p>{{this.user.user}} you're logged in</p>
+            <div>
+              <button @click="logout">Logout</button>
+            </div>
           </div>
         </div>
       </div>
@@ -124,9 +130,14 @@ export default {
 
     setUserAndToken (response) {
       console.log('resp', response)
-      this.setUser(response.data.data.email)
-      this.setToken(response.headers.authorization)
-      // this.loginUser(response.data.data.email, response.headers.authorization)
+      if (response != null) {
+        this.setUser(response.data.data.email)
+        this.setToken(response.headers.authorization)
+        // this.loginUser(response.data.data.email, response.headers.authorization)
+      } else {
+        this.setUser(null)
+        this.setToken(null)
+      }
     },
 
     async login () {
@@ -134,9 +145,27 @@ export default {
       const user = { user: { email: this.email, password: this.password } }
       // const config = { withCredentials: true }
       await axios.post(process.env.VUE_APP_API_URL + '/login', user)
-        .then(response =>
+        .then(response => {
           this.setUserAndToken(response)
-        )
+          this.currentUserResponse = 200
+        })
+    },
+    async logout () {
+      console.log('token', this.user.token)
+      await axios.delete(process.env.VUE_APP_API_URL + '/logout',
+        {
+          headers: {
+            Authorization: this.user.token
+          }
+        }
+      )
+      // .then(resp => { this.clubs = resp.data }
+        .then(response => {
+          this.setUserAndToken(null)
+          this.currentUserResponse = 401
+          console.log('uh', this.currentUserResponse)
+        })
+        .catch(err => console.log('err', err))
     }
   }
 }
