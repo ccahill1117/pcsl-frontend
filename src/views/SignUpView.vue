@@ -1,59 +1,62 @@
 <template>
   <div class="sign-up">
     <h1>Sign up</h1>
-    <div>
-      <label>email</label>
+    <div class="sign-up-field">
+      <label>Email</label>
       <input v-model="firstName">
     </div>
-    <div>
-      <label>last name</label>
+    <div class="sign-up-field">
+      <label>First Name</label>
       <input v-model="lastName">
     </div>
-    <div>
-      <label>address 1</label>
+    <div class="sign-up-field">
+      <label>Last Name</label>
+      <input v-model="lastName">
+    </div>
+    <div class="sign-up-field">
+      <label>Address 1</label>
       <input v-model="address1">
     </div>
-    <div>
-      <label>address 2</label>
+    <div class="sign-up-field">
+      <label>Address 2</label>
       <input v-model="address2">
     </div>
-    <div>
-      <label>state</label>
+    <div class="sign-up-field">
+      <label>State</label>
       <input v-model="state">
     </div>
-    <div>
-      <label>zip</label>
+    <div class="sign-up-field">
+      <label>Zip Code</label>
       <input v-model="zipCode">
     </div>
-    <div>
-      <label>email address</label>
+    <div class="sign-up-field">
+      <label>Email Address</label>
       <input v-model="email">
     </div>
-    <div>
-      <label>phone</label>
+    <div class="sign-up-field">
+      <label>Phone</label>
       <input v-model="phone">
     </div>
-    <div>
-      <label>gender</label>
+    <div class="sign-up-field">
+      <label>Gender</label>
       <input v-model="gender">
     </div>
-    <div>
-      <label>date of birth</label>
-      <input type="date" v-model="dateOfBirth">
-    </div>
-    <div>
+    <div class="sign-up-field">
       <label>US Squash ID</label>
       <input v-model="usSquashId">
     </div>
-    <div>
+
+    <div class="sign-up-field">
+      <label>Date of Birth</label>
+      <input type="date" v-model="dateOfBirth">
+    </div>
+    <div class="sign-up-field">
       <label>club</label>
-      <select v-model="selected">
-        <option v-bind="(item, key) in clubs" :value="key">
-          {{item?.name}}
-        </option>
+      <select id="categories" v-model="club">
+        <option v-for="item in clubs" :value="item.id" :key="item.id">{{ item.name }}</option>
       </select>
     </div>
-    <div>
+    <div class="sign-up-field">
       <button @click="signUp">Sign up</button>
     </div>
   </div>
@@ -85,9 +88,11 @@ export default {
       dateOfBirth: '',
       usSquashId: '',
       selected: null,
+      club: null,
 
       // other
-      clubs: []
+      clubs: [],
+      states: ['Alabama', 'Alaska', 'American Samoa', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'District of Columbia', 'Federated States of Micronesia', 'Florida', 'Georgia', 'Guam', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Marshall Islands', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Northern Mariana Islands', 'Ohio', 'Oklahoma', 'Oregon', 'Palau', 'Pennsylvania', 'Puerto Rico', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virgin Island', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming']
     }
   },
   methods: {
@@ -113,5 +118,8 @@ export default {
     display: inline-block;
     width: 150px;
     text-align: right;
+  }
+  .sign-up-field {
+    padding-top: 10px
   }
 </style>
