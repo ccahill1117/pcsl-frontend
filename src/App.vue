@@ -16,7 +16,7 @@
             </div>
             <div class="login-container-logged-out-item">
               <label>password</label>
-              <input v-model="password">
+              <input type="password" v-model="password">
             </div>
             <div>
               <button @click="login">Login</button>

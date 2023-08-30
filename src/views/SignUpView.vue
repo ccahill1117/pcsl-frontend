@@ -3,50 +3,52 @@
     <h1>Sign up</h1>
     <div class="sign-up-field">
       <label>First Name</label>
-      <input v-model="firstName">
+      <input v-model="user.first_name">
     </div>
     <div class="sign-up-field">
       <label>Last Name</label>
-      <input v-model="lastName">
+      <input v-model="user.last_name">
     </div>
     <div class="sign-up-field">
       <label>Address 1</label>
-      <input v-model="address1">
+      <input v-model="user.address_1">
     </div>
     <div class="sign-up-field">
       <label>Address 2</label>
-      <input v-model="address2">
+      <input v-model="user.address_2">
     </div>
     <div class="sign-up-field">
       <label>State</label>
-      <input v-model="state">
+      <select id="state" v-model="user.state">
+        <option v-for="item in states" :value="item.id" :key="item.id">{{ item }}</option>
+      </select>
     </div>
     <div class="sign-up-field">
       <label>Zip Code</label>
-      <input v-model="zipCode">
+      <input v-model="user.zip_code">
     </div>
     <div class="sign-up-field">
       <label>Phone</label>
-      <input v-model="phone">
+      <input v-model="user.phone">
     </div>
     <div class="sign-up-field">
       <label>Gender</label>
-      <select id="gender" v-model="gender">
+      <select id="gender" v-model="user.gender">
         <option v-for="item in genders" :value="item.id" :key="item.id">{{ item }}</option>
       </select>
     </div>
     <div class="sign-up-field">
       <label>US Squash ID</label>
-      <input v-model="usSquashId">
+      <input v-model="user.us_squash_id">
     </div>
 
     <div class="sign-up-field">
       <label>Date of Birth</label>
-      <input type="date" v-model="dateOfBirth">
+      <input type="date" v-model="user.date_of_birth">
     </div>
     <div class="sign-up-field">
       <label>club</label>
-      <select id="club" v-model="club">
+      <select id="club" v-model="user.club">
         <option v-for="item in clubs" :value="item.id" :key="item.id">{{ item.name }}</option>
       </select>
     </div>
@@ -55,18 +57,18 @@
     <div class="sign-up-field"></div>
     <div class="sign-up-field">
       <label>Email</label>
-      <input v-model="email">
+      <input v-model="user.email">
     </div>
     <div class="sign-up-field">
       <label>Password</label>
-      <input v-model="password1">
+      <input type="password" v-model="user.password">
     </div>
     <div class="sign-up-field">
       <label>Re-enter Password</label>
-      <input v-model="password2">
+      <input type="password" v-model="user.password2">
     </div>
     <div class="sign-up-field">
-      <button @click="signUp">Sign up</button>
+      <button :disabled="!passwordsOk" @click="signUp">Sign up</button>
     </div>
   </div>
 </template>
@@ -85,21 +87,23 @@ export default {
   data () {
     return {
       // sign up data
-      firstName: '',
-      lastName: '',
-      address1: '',
-      address2: '',
-      state: '',
-      zipCode: '',
-      email: '',
-      phone: '',
-      gender: '',
-      dateOfBirth: '',
-      usSquashId: '',
-      selected: null,
-      club: null,
-      password1: '',
-      password2: '',
+      user: {
+        first_name: 'chris',
+        last_name: '',
+        address_1: '',
+        address_2: '',
+        state: '',
+        zip_code: '',
+        email: 'cthomascahill@gmail.com',
+        phone: '',
+        gender: '',
+        date_of_birth: '',
+        us_squash_id: '',
+        selected: null,
+        club: null,
+        password: 'tester',
+        password2: 'tester'
+      },
 
       // other
       clubs: [],
@@ -108,8 +112,10 @@ export default {
     }
   },
   methods: {
-    signUp () {
-      console.log('call API', this.email)
+    async signUp () {
+      const user = this.user
+      console.log('call API data', { user })
+      await axios.post(process.env.VUE_APP_API_URL + '/signup', { user }).then(resp => { console.log('res', resp) })
     },
     async getClubs () {
       // console.log('token', this.user.token)
@@ -121,6 +127,12 @@ export default {
   },
   mounted () {
     this.getClubs()
+  },
+  computed: {
+    passwordsOk () {
+      // console.log(this.user.password !== '' && this.user.password2 !== '' && this.user.password.length > 8 && this.user.password2.length > 8 && this.user.password === this.user.password2)
+      return (this.user.password !== '' && this.user.password2 !== '' && this.user.password.length >= 8 && this.user.password2.length >= 8 && this.user.password === this.user.password2)
+    }
   }
 }
 </script>
@@ -133,5 +145,12 @@ export default {
   }
   .sign-up-field {
     padding-top: 10px
+  }
+  input {
+    border: 0px;
+    margin-left: 5px;
+  }
+  select {
+    margin-left: 5px;
   }
 </style>
