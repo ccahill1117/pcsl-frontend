@@ -1,6 +1,6 @@
 <template>
   <div class="scores">
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <h1>coming soon</h1>
   </div>
 </template>
 
