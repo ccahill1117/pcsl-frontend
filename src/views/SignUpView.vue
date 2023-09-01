@@ -1,6 +1,6 @@
 <template>
   <div class="sign-up">
-    <h1>Sign up</h1>
+    <h1>Create PCSL account</h1>
     <div class="sign-up-field">
       <label>First Name</label>
       <input v-model="user.first_name">
@@ -48,7 +48,7 @@
     </div>
     <div class="sign-up-field">
       <label>club</label>
-      <select id="club" v-model="user.club">
+      <select id="club" v-model="user.clubs_id">
         <option v-for="item in clubs" :value="item.id" :key="item.id">{{ item.name }}</option>
       </select>
     </div>
@@ -88,21 +88,20 @@ export default {
     return {
       // sign up data
       user: {
-        first_name: '',
-        last_name: '',
-        address_1: '',
-        address_2: '',
-        state: '',
-        zip_code: '',
-        email: '',
-        phone: '',
-        gender: '',
-        date_of_birth: '',
-        us_squash_id: '',
-        selected: null,
-        club: null,
-        password: '',
-        password2: ''
+        first_name: 'c',
+        last_name: 'c',
+        address_1: 'jhgjhg',
+        address_2: 'jhjhg',
+        state: 'NJ',
+        zip_code: '97212',
+        email: 'cthomascahill@gmail.com',
+        phone: '123456',
+        gender: '123456',
+        date_of_birth: '1989-11-17',
+        us_squash_id: '123',
+        clubs_id: '',
+        password: 'password',
+        password2: 'password'
       },
 
       // other

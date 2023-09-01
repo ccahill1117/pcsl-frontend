@@ -48,7 +48,7 @@
             <p><router-link to="/user_registration" class="router-link-class">Register Here!</router-link></p>
           </div>
           <div class="nav-item">
-            <p><router-link to="/sign_up" class="router-link-class">SignUp</router-link></p>
+            <p><router-link to="/sign_up" class="router-link-class">Create Account</router-link></p>
           </div>
           <div class="nav-item">
             <p><router-link to="/scores" class="router-link-class">Scores</router-link></p>
