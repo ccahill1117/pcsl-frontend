@@ -76,6 +76,9 @@
       <div class="sign-up-field">
         <button :disabled="!passwordsOk" @click="signUp">Sign up</button>
       </div>
+      <div>
+        <p>passwords need to be 8 characters or greater and must match</p>
+      </div>
       <div v-if="submitError !== false">
         <p>error submitting, email may be in use</p>
       </div>
