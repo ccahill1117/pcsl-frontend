@@ -10,21 +10,23 @@
 
         <div>
           <div class="login-container" v-if="currentUserResponse == 401">
-            <div class="login-container-logged-out-item">
-              <label>email</label>
-              <input v-model="email">
+            <div>
+              <div>
+                <label>email</label>
+                <input v-model="email">
+              </div>
+              <div>
+                <label>password</label>
+                <input type="password" v-model="password">
+              </div>
             </div>
-            <div class="login-container-logged-out-item">
-              <label>password</label>
-              <input type="password" v-model="password">
-            </div>
-            <div class="login-container-logged-out-item">
+            <div class="login-button">
               <button @click="login">Login</button>
             </div>
           </div>
           <div class="login-container" v-if="currentUserResponse == 200">
             <p>{{this.user.user}} you're logged in</p>
-            <div>
+            <div class="login-button">
               <button @click="logout">Logout</button>
             </div>
           </div>
@@ -188,11 +190,12 @@ export default {
 }
 .login-container {
   display: flex;
-  /* flex-direction: row; */
+  flex-direction: row;
   color: white;
-  height: 100%;
-  width: 100%;
-  align-items: baseline;
+  /* height: 100%; */
+  /* width: 100%; */
+  /* align-items: baseline; */
+
 }
 .login-container-logged-out {
   display: inline-block;
@@ -202,6 +205,7 @@ export default {
   display: inline-block;
   /* align-self: flex-end; */
   /* display: flex */
+  border: 1px red solid;
 }
 .column-container {
   display: inline-block;
@@ -236,6 +240,11 @@ export default {
   flex: 1 auto;
   width: 1000px;
 }
+.login-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 body {
   background-color: black;
 }
@@ -246,6 +255,13 @@ nav {
 nav a {
   font-weight: bold;
   color: #2c3e50;
+}
+
+input {
+  height: 15px;
+}
+button {
+  margin-left: 20px;
 }
 
 .footer-contact {
