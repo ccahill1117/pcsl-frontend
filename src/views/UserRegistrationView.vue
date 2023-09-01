@@ -57,11 +57,12 @@ export default {
     // RegistrationsIndex
   },
   mounted () {
-    console.log('reg user', (this.user.token != null))
+    console.log('reg user', (this.user.userId))
   },
   computed: {
     user () {
       return this.$store.state
+      // userId = this.user.userId
     },
     // check for forms filled
     registrationOk () {

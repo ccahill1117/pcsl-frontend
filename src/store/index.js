@@ -5,7 +5,8 @@ import createPersistedState from 'vuex-plugin-persistedstate'
 export default createStore({
   state: {
     user: null,
-    token: null
+    token: null,
+    userId: null
   },
   getters: {},
   mutations: {
@@ -14,6 +15,9 @@ export default createStore({
     },
     setToken (state, token) {
       state.token = token
+    },
+    setUserId (state, userId) {
+      state.userId = userId
     }
   },
   actions: {},

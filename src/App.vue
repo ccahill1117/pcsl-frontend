@@ -113,7 +113,7 @@ export default {
     }
   },
   methods: {
-    ...mapMutations(['setUser', 'setToken']),
+    ...mapMutations(['setUser', 'setToken', 'setUserId']),
 
     renderProfile () {
       return (
@@ -142,10 +142,12 @@ export default {
       if (response != null) {
         this.setUser(response.data.data.email)
         this.setToken(response.headers.authorization)
+        this.setUserId(response.data.data.id)
         // this.loginUser(response.data.data.email, response.headers.authorization)
       } else {
         this.setUser(null)
         this.setToken(null)
+        this.setUserId(null)
       }
     },
 
