@@ -98,20 +98,20 @@ export default {
     return {
       // sign up data
       user: {
-        first_name: 'c',
-        last_name: 'c',
-        address_1: 'jhgjhg',
-        address_2: 'jhjhg',
-        state: 'NJ',
-        zip_code: '97212',
-        email: 'cthomascahill@gmail.com',
-        phone: '123456',
-        gender: '123456',
-        date_of_birth: '1989-11-17',
-        us_squash_id: '123',
+        first_name: '',
+        last_name: '',
+        address_1: '',
+        address_2: '',
+        state: '',
+        zip_code: '',
+        email: '',
+        phone: '',
+        gender: '',
+        date_of_birth: '',
+        us_squash_id: '',
         clubs_id: '',
-        password: 'password',
-        password2: 'password'
+        password: '',
+        password2: ''
       },
       submitSuccess: false,
       submitError: false,
