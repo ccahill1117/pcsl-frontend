@@ -11,7 +11,7 @@ loosely organized in a weekly competitive and social league format'"</i>
 <p><em>Last updated: September 1, 2023</em></p>
 
 Registrations are open for Fall League
-Please create an account here, then register for fall league here if you would like to participate
+Please create an account <router-link to="/sign_up">here</router-link>, then register for fall league <router-link to="/user_registration">here</router-link> if you would like to participate
 
 <hr />
 
