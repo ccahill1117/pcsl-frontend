@@ -7,9 +7,9 @@
         <div class="logo-container">
           <img alt="Vue logo" src="./assets/header_bkgd_small.jpg">
         </div>
-        <div class="login-container">
-          <div class="login-container-logged-out" v-if="currentUserResponse == 401">
-            <p>you're logged out</p>
+
+        <div>
+          <div class="login-container" v-if="currentUserResponse == 401">
             <div class="login-container-logged-out-item">
               <label>email</label>
               <input v-model="email">
@@ -18,11 +18,11 @@
               <label>password</label>
               <input type="password" v-model="password">
             </div>
-            <div>
+            <div class="login-container-logged-out-item">
               <button @click="login">Login</button>
             </div>
           </div>
-          <div v-if="currentUserResponse == 200">
+          <div class="login-container" v-if="currentUserResponse == 200">
             <p>{{this.user.user}} you're logged in</p>
             <div>
               <button @click="logout">Logout</button>
@@ -30,6 +30,7 @@
           </div>
         </div>
       </div>
+
       <div class="nav-content-container">
         <div class="left-nav">
           <div class="nav-item">
@@ -40,6 +41,9 @@
           </div>
           <div class="nav-item">
             <p><router-link to="/registrations" class="router-link-class">Reg</router-link></p>
+          </div>
+          <div class="nav-item">
+            <p><router-link to="/user_registrations" class="router-link-class">Register Here!</router-link></p>
           </div>
           <div class="nav-item">
             <p><router-link to="/sign_up" class="router-link-class">SignUp</router-link></p>
@@ -61,6 +65,9 @@
           </div>
           <div class="nav-item">
             <p><router-link to="/rules" class="router-link-class">Rules</router-link></p>
+          </div>
+          <div class="nav-item">
+            <p><router-link to="/maps" class="router-link-class">Maps</router-link></p>
           </div>
         </div>
         <div class="content-col">
@@ -181,16 +188,20 @@ export default {
 }
 .login-container {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: row; */
   color: white;
+  height: 100%;
   width: 100%;
+  align-items: baseline;
 }
 .login-container-logged-out {
   display: inline-block;
   flex-direction: row;
 }
 .login-container-logged-out-item {
-  border: 1px green solid;
+  display: inline-block;
+  /* align-self: flex-end; */
+  /* display: flex */
 }
 .column-container {
   display: inline-block;
@@ -199,8 +210,10 @@ export default {
 .logo-login-container {
   display: flex;
   flex-direction: row;
-  border: 3px red solid;
-  /* width: 1200px; */
+}
+.logo-container {
+  display: inline-block;
+  align-self: flex-end;
 }
 .nav-content-container {
   display: flex;

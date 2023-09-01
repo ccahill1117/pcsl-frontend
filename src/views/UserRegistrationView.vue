@@ -1,20 +1,19 @@
 <template>
   <div class="about">
-    <h1>Current Registrations</h1>
-    <RegistrationsIndex />
+    <h1>Register Here for Fall 2023</h1>
     <!-- <p>{{ ApiUtilities }}</p> -->
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import RegistrationsIndex from '@/components/RegistrationsIndex.vue'
+// import RegistrationsIndex from '@/components/RegistrationsIndex.vue'
 import { ApiUtilities } from '../../utils/ApiUtilities.js'
 
 export default {
-  name: 'RegistrationsView',
+  name: 'UserRegistrationView',
   components: {
-    RegistrationsIndex
+    // RegistrationsIndex
   },
   methods () {
     // methods

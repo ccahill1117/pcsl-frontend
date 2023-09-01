@@ -56,6 +56,16 @@ const routes = [
     path: '/rules',
     name: 'rules',
     component: () => import(/* webpackChunkName: "about" */ '../views/RulesView.vue')
+  },
+  {
+    path: '/maps',
+    name: 'maps',
+    component: () => import(/* webpackChunkName: "about" */ '../views/MapsView.vue')
+  },
+  {
+    path: '/user_registration',
+    name: 'register for current season',
+    component: () => import(/* webpackChunkName: "about" */ '../views/UserRegistrationView.vue')
   }
 ]
 
