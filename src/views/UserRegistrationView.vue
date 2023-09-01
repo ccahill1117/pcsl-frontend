@@ -6,7 +6,7 @@
       <p>thanks for registering!</p>
     </div>
     <div v-if="submitSuccess === false">
-      <div v-if="user.token === null">Login to register</div>
+      <div v-if="user.token === null"><router-link to="/sign_up">Create account</router-link>, then login to register</div>
       <div v-if="user.token !== null">
         <div class="sign-up">
           <div class="sign-up-field">

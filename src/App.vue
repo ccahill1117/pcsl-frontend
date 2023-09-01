@@ -75,7 +75,7 @@
       </div>
     </div>
     <div class="footer-contact">
-      <p>content: portland city squash leage | Website 2.0 - <a href="mailto:cthomascahill@gmail.com">Chris Cahill</a> | webmaster: <a href="mailto:membership@portlandsquash.org" class="webmaster">PCSL</a></p>
+      <p>content: portland city squash leage | Website 2.0 - <a href="mailto:cthomascahill@gmail.com" class="webmaster">Chris Cahill</a> | webmaster: <a href="mailto:membership@portlandsquash.org" class="webmaster">PCSL</a></p>
     </div>
 
   </div>
