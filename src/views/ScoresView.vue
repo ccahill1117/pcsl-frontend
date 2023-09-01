@@ -1,6 +1,6 @@
 <template>
   <div class="scores">
-    <h1>coming soon</h1>
+    <h1>Coming Soon</h1>
   </div>
 </template>
 
