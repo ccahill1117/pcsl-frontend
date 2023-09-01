@@ -1,76 +1,86 @@
 <template>
   <div class="sign-up">
     <h1>Create PCSL account</h1>
-    <div class="sign-up-field">
-      <label>First Name</label>
-      <input v-model="user.first_name">
+    <div v-if="submitSuccess">
+      <p>account created!</p>
     </div>
-    <div class="sign-up-field">
-      <label>Last Name</label>
-      <input v-model="user.last_name">
+    <div v-if="userLoggedIn.token !== null">
+      <p>you already have an Account</p>
     </div>
-    <div class="sign-up-field">
-      <label>Address 1</label>
-      <input v-model="user.address_1">
+    <div v-if="!submitSuccess && userLoggedIn.token === null">
+      <div class="sign-up-field">
+        <label>First Name</label>
+        <input v-model="user.first_name">
+      </div>
+      <div class="sign-up-field">
+        <label>Last Name</label>
+        <input v-model="user.last_name">
+      </div>
+      <div class="sign-up-field">
+        <label>Address 1</label>
+        <input v-model="user.address_1">
+      </div>
+      <div class="sign-up-field">
+        <label>Address 2</label>
+        <input v-model="user.address_2">
+      </div>
+      <div class="sign-up-field">
+        <label>State</label>
+        <select id="state" v-model="user.state">
+          <option v-for="item in states" :value="item.id" :key="item.id">{{ item }}</option>
+        </select>
+      </div>
+      <div class="sign-up-field">
+        <label>Zip Code</label>
+        <input v-model="user.zip_code">
+      </div>
+      <div class="sign-up-field">
+        <label>Phone</label>
+        <input v-model="user.phone">
+      </div>
+      <div class="sign-up-field">
+        <label>Gender</label>
+        <select id="gender" v-model="user.gender">
+          <option v-for="item in genders" :value="item.id" :key="item.id">{{ item }}</option>
+        </select>
+      </div>
+      <div class="sign-up-field">
+        <label>US Squash ID</label>
+        <input v-model="user.us_squash_id">
+      </div>
+      <div class="sign-up-field">
+        <label>Date of Birth</label>
+        <input type="date" v-model="user.date_of_birth">
+      </div>
+      <div class="sign-up-field">
+        <label>club</label>
+        <select id="club" v-model="user.clubs_id">
+          <option v-for="item in clubs" :value="item.id" :key="item.id">{{ item.name }}</option>
+        </select>
+      </div>
+      <div class="sign-up-field"></div>
+      <div class="sign-up-field"></div>
+      <div class="sign-up-field"></div>
+      <div class="sign-up-field">
+        <label>Email</label>
+        <input v-model="user.email">
+      </div>
+      <div class="sign-up-field">
+        <label>Password</label>
+        <input type="password" v-model="user.password">
+      </div>
+      <div class="sign-up-field">
+        <label>Re-enter Password</label>
+        <input type="password" v-model="user.password2">
+      </div>
+      <div class="sign-up-field">
+        <button :disabled="!passwordsOk" @click="signUp">Sign up</button>
+      </div>
+      <div v-if="submitError !== false">
+        <p>error submitting, email may be in use</p>
+      </div>
     </div>
-    <div class="sign-up-field">
-      <label>Address 2</label>
-      <input v-model="user.address_2">
     </div>
-    <div class="sign-up-field">
-      <label>State</label>
-      <select id="state" v-model="user.state">
-        <option v-for="item in states" :value="item.id" :key="item.id">{{ item }}</option>
-      </select>
-    </div>
-    <div class="sign-up-field">
-      <label>Zip Code</label>
-      <input v-model="user.zip_code">
-    </div>
-    <div class="sign-up-field">
-      <label>Phone</label>
-      <input v-model="user.phone">
-    </div>
-    <div class="sign-up-field">
-      <label>Gender</label>
-      <select id="gender" v-model="user.gender">
-        <option v-for="item in genders" :value="item.id" :key="item.id">{{ item }}</option>
-      </select>
-    </div>
-    <div class="sign-up-field">
-      <label>US Squash ID</label>
-      <input v-model="user.us_squash_id">
-    </div>
-
-    <div class="sign-up-field">
-      <label>Date of Birth</label>
-      <input type="date" v-model="user.date_of_birth">
-    </div>
-    <div class="sign-up-field">
-      <label>club</label>
-      <select id="club" v-model="user.clubs_id">
-        <option v-for="item in clubs" :value="item.id" :key="item.id">{{ item.name }}</option>
-      </select>
-    </div>
-    <div class="sign-up-field"></div>
-    <div class="sign-up-field"></div>
-    <div class="sign-up-field"></div>
-    <div class="sign-up-field">
-      <label>Email</label>
-      <input v-model="user.email">
-    </div>
-    <div class="sign-up-field">
-      <label>Password</label>
-      <input type="password" v-model="user.password">
-    </div>
-    <div class="sign-up-field">
-      <label>Re-enter Password</label>
-      <input type="password" v-model="user.password2">
-    </div>
-    <div class="sign-up-field">
-      <button :disabled="!passwordsOk" @click="signUp">Sign up</button>
-    </div>
-  </div>
 </template>
 
 <script>
@@ -103,6 +113,8 @@ export default {
         password: 'password',
         password2: 'password'
       },
+      submitSuccess: false,
+      submitError: false,
 
       // other
       clubs: [],
@@ -114,7 +126,9 @@ export default {
     async signUp () {
       const user = this.user
       console.log('call API data', { user })
-      await axios.post(process.env.VUE_APP_API_URL + '/signup', { user }).then(resp => { console.log('res', resp) })
+      await axios.post(process.env.VUE_APP_API_URL + '/signup', { user })
+        .then(resp => { this.submitSuccess = true })
+        .catch(err => { this.submitError = err })
     },
     async getClubs () {
       // console.log('token', this.user.token)
@@ -130,6 +144,10 @@ export default {
   computed: {
     passwordsOk () {
       return (this.user.password !== '' && this.user.password2 !== '' && this.user.password.length >= 8 && this.user.password2.length >= 8 && this.user.password === this.user.password2)
+    },
+    userLoggedIn () {
+      return this.$store.state
+      // userId = this.user.userId
     }
   }
 }
