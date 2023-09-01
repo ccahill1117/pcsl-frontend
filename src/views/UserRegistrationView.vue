@@ -35,6 +35,11 @@
         <div>
           <input v-model="registration.initials">
         </div>
+        <div>
+          <div class="sign-up-field">
+            <button :disabled="!registrationOk" @click="signUp">Sign up</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -57,6 +62,10 @@ export default {
   computed: {
     user () {
       return this.$store.state
+    },
+    // check for forms filled
+    registrationOk () {
+      return (this.registration.regular !== '' && this.registration.is_captain !== '' && this.registration.division !== '' && this.registration.rank !== '' && this.registration.initials !== '')
     }
   },
   methods: {

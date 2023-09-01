@@ -130,7 +130,6 @@ export default {
   },
   computed: {
     passwordsOk () {
-      // console.log(this.user.password !== '' && this.user.password2 !== '' && this.user.password.length > 8 && this.user.password2.length > 8 && this.user.password === this.user.password2)
       return (this.user.password !== '' && this.user.password2 !== '' && this.user.password.length >= 8 && this.user.password2.length >= 8 && this.user.password === this.user.password2)
     }
   }
