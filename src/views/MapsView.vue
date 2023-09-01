@@ -1,6 +1,6 @@
 <template>
   <div class="dev">
-    <h1>dev</h1>
+    <h1>Coming Soon</h1>
 
     <!-- <div><a href="http://www.themac.com" name="mac" title="Click for Club Website" target="blank"><img src="graphics/logo_mac.gif" width="100px"></a><span style="vertical-align: top;"><a href="#top" class="link_caret">&nbsp;^</a></span></div>
 <div>1849 SW Salmon St, Portland, OR 97205</div>

@@ -1,7 +1,7 @@
 <template>
   <div class="hi">
     <p>
-      Current Registrations
+      Current Registrations coming soon
     </p>
     <p>Register for current season <router-link to="/user_registration">here</router-link></p>
     <!-- <p>drag and drop to reorder</p> -->

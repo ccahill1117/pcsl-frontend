@@ -88,21 +88,21 @@ export default {
     return {
       // sign up data
       user: {
-        first_name: 'chris',
+        first_name: '',
         last_name: '',
         address_1: '',
         address_2: '',
         state: '',
         zip_code: '',
-        email: 'cthomascahill@gmail.com',
+        email: '',
         phone: '',
         gender: '',
         date_of_birth: '',
         us_squash_id: '',
         selected: null,
         club: null,
-        password: 'tester',
-        password2: 'tester'
+        password: '',
+        password2: ''
       },
 
       // other

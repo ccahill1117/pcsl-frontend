@@ -4,7 +4,7 @@
     <h1>SMIGEL / YUSEM AWARD</h1>
 <hr />
 <h2>GUS YUSEM</h2>
-<div style="padding: 1em 0 1em 0;"><img src="images/gus_support_crop.jpg" style="width: 200px; border:4px solid black"></div>
+<div style="padding: 1em 0 1em 0;"><img src=".././assets/gus_yusem.jpg" style="width: 200px; border:4px solid black"></div>
   <p>In 2017 <strong>Gus Yusem</strong>, another example of good sportsmanship, enthusiasm, fairness and courtesy on court, joined <strong>Dave Smigel</strong> as an honored past member of the League. A wily and resourceful player whose signature tactic was the lob, Gus also served as the scheduling genius behind the League for many a season. He is much missed and is celebrated here in this seasonal award.</p>
   <h2>DAVID SMIGEL</h2>
 <p><strong>David Smigel</strong>, a long-time member, really set the tone for the league. Dave was the ultimate good sportsman and loved the game of squash. He would encourage new players, put his heart into the game and always left everyone with a smile. He also loved the community of City League and was a regular at the pub where he could connect with his fellow 'squashers'.</p>

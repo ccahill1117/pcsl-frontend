@@ -38,9 +38,9 @@
           <div class="nav-item">
             <p><router-link to="/" class="router-link-class">Home</router-link></p>
           </div>
-          <div class="nav-item">
+          <!-- <div class="nav-item">
             <p><router-link to="/about" class="router-link-class">About</router-link></p>
-          </div>
+          </div> -->
           <div class="nav-item">
             <p><router-link to="/registrations" class="router-link-class">Reg</router-link></p>
           </div>
@@ -49,9 +49,6 @@
           </div>
           <div class="nav-item">
             <p><router-link to="/sign_up" class="router-link-class">SignUp</router-link></p>
-          </div>
-          <div class="nav-item">
-            <p><router-link to="/login" class="router-link-class">Login</router-link></p>
           </div>
           <div class="nav-item">
             <p><router-link to="/scores" class="router-link-class">Scores</router-link></p>
@@ -78,7 +75,7 @@
       </div>
     </div>
     <div class="footer-contact">
-      <p>Website 2.0 - Christopher Cahill</p>
+      <p>content: portland city squash leage | Website 2.0 - Chris Cahill | webmaster: <a href="mailto:membership@portlandsquash.org" class="webmaster">PCSL</a></p>
     </div>
 
   </div>
@@ -271,6 +268,10 @@ button {
   font-size: 12px;
   /* padding-right: 50px; */
   text-align: center;
+}
+
+.webmaster {
+  color: white;
 }
 
 </style>
