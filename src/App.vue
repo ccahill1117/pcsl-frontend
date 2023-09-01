@@ -43,7 +43,7 @@
             <p><router-link to="/registrations" class="router-link-class">Reg</router-link></p>
           </div>
           <div class="nav-item">
-            <p><router-link to="/user_registrations" class="router-link-class">Register Here!</router-link></p>
+            <p><router-link to="/user_registration" class="router-link-class">Register Here!</router-link></p>
           </div>
           <div class="nav-item">
             <p><router-link to="/sign_up" class="router-link-class">SignUp</router-link></p>
@@ -251,7 +251,7 @@ nav a {
 .footer-contact {
   color: white;
   font-size: 12px;
-  padding-right: 50px;
+  /* padding-right: 50px; */
   text-align: center;
 }
 

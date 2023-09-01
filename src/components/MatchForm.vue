@@ -1,7 +1,7 @@
 <template>
   <div class="matchForm">
     <div>
-      match form
+      Coming soon
     </div>
   </div>
 </template>
