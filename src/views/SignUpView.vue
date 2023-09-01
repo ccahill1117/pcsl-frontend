@@ -41,7 +41,7 @@
       <div class="sign-up-field">
         <label>Gender</label>
         <select id="gender" v-model="user.gender">
-          <option v-for="item in genders" :value="item.id" :key="item.id">{{ item }}</option>
+          <option v-for="item in genders" :value="item" :key="item.id">{{ item }}</option>
         </select>
       </div>
       <div class="sign-up-field">
@@ -128,7 +128,7 @@ export default {
   methods: {
     async signUp () {
       const user = this.user
-      console.log('call API data', { user })
+      console.log('call API data', user)
       await axios.post(process.env.VUE_APP_API_URL + '/signup', { user })
         .then(resp => { this.submitSuccess = true })
         .catch(err => { this.submitError = err })
