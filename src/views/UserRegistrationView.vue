@@ -2,42 +2,64 @@
   <div class="about">
     <h1>Register Here for Fall 2023</h1>
     <!-- <p>{{ ApiUtilities }}</p> -->
-    <div v-if="user.token === null">Login to register</div>
-    <div v-if="user.token !== null">
-      <div class="sign-up">
-        <div class="sign-up-field">
-          <label>First Name</label>
-          <input v-model="registration.regular">
-        </div>
-        <div class="sign-up-field">
-          <label>Last Name</label>
-          <input v-model="registration.is_captain">
-        </div>
-        <div class="sign-up-field">
-          <label>Address 1</label>
-          <input v-model="registration.division">
-        </div>
-        <div class="sign-up-field">
-          <label>Address 2</label>
-          <input v-model="registration.rank">
-        </div>
-        <hr />
-        <div>
-          <p class="legal"><strong>By registering with or participating in Portland City Squash League, the registrant / participant agrees to the following statement:</strong></p>
-          <p class="legal"><i>&quot;I hereby for myself, my heirs, administrators, and personal representatives, waive and release any and all claims for damages that I may have against the Portland City Squash League, the Multnomah Athletic Club, Club Sport, the Lloyd Athletic Club, Sunset Athletic Club, Reed College or any other participating club and their representatives, successors and assigns for any and all injuries and damages of whatsoever kind or nature that I may suffer in conjunction with my participation in the Portland City Squash League.&quot;</i></p>
-
-          <h3 style="color: black">Eye protection is MANDATORY</h3>
-        </div>
-        <hr />
-        <div>
-          Initial here that you have read the rules and waiver
-        </div>
-        <div>
-          <input v-model="registration.initials">
-        </div>
-        <div>
+    <div v-if="submitSuccess === true">
+      <p>thanks for registering!</p>
+    </div>
+    <div v-if="submitSuccess === false">
+      <div v-if="user.token === null">Login to register</div>
+      <div v-if="user.token !== null">
+        <div class="sign-up">
           <div class="sign-up-field">
-            <button :disabled="!registrationOk" @click="signUp">Sign up</button>
+            <label>Regular or Sub</label>
+            <select id="" v-model="registration.regular">
+              <option value="true">Regular</option>
+              <option value="false">Sub</option>
+            </select>
+          </div>
+          <div class="sign-up-field">
+            <label>Volunteer as Captain</label>
+            <select id="" v-model="registration.is_captain">
+              <option value="true">Yes</option>
+              <option value="false">No</option>
+            </select>
+          </div>
+          <div class="sign-up-field">
+            <label>Division</label>
+            <select id="" v-model="registration.division">
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select>
+          </div>
+          <div class="sign-up-field">
+            <label>Rank</label>
+            <select id="" v-model="registration.rank">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <hr />
+          <div>
+            <p class="legal"><strong>By registering with or participating in Portland City Squash League, the registrant / participant agrees to the following statement:</strong></p>
+            <p class="legal"><i>&quot;I hereby for myself, my heirs, administrators, and personal representatives, waive and release any and all claims for damages that I may have against the Portland City Squash League, the Multnomah Athletic Club, Club Sport, the Lloyd Athletic Club, Sunset Athletic Club, Reed College or any other participating club and their representatives, successors and assigns for any and all injuries and damages of whatsoever kind or nature that I may suffer in conjunction with my participation in the Portland City Squash League.&quot;</i></p>
+            <h3 style="color: black">Eye protection is MANDATORY</h3>
+          </div>
+          <hr />
+          <div>
+            Initial here that you have read the rules and waiver
+          </div>
+          <div>
+            <input v-model="registration.initials">
+          </div>
+          <div>
+            <div class="sign-up-field">
+              <button :disabled="!registrationOk" @click="register">Sign up</button>
+            </div>
+            <div v-if="error !== false">
+              error signing up - you may have already registered
+            </div>
           </div>
         </div>
       </div>
@@ -71,9 +93,16 @@ export default {
   },
   methods: {
     async register () {
-      const user = this.user
-      console.log('call API data', { user })
-      await axios.post(process.env.VUE_APP_API_URL + '/signup', { user }).then(resp => { console.log('res', resp) })
+      const registration = this.registration
+      registration.user_id = this.user.userId
+      console.log('call API data', registration)
+      await axios.post(process.env.VUE_APP_API_URL + '/user_registrations', { registration },
+        {
+          headers: {
+            Authorization: this.user.token
+          }
+        }).then(resp => { this.submitSuccess = true })
+        .catch(err => { this.error = err })
     }
   },
   data () {
@@ -84,8 +113,12 @@ export default {
         is_captain: '',
         division: '',
         rank: '',
-        initials: ''
-      }
+        initials: '',
+        // currently just hardcoding szn id
+        seasons_id: 1
+      },
+      submitSuccess: false,
+      error: false
     }
   }
 }
