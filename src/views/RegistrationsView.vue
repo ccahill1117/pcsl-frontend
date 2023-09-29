@@ -33,7 +33,8 @@ export default {
       await axios.get(process.env.VUE_APP_API_URL + '/user_registrations/1')
         .then(resp =>
         // { this.registrations = resp.data }
-          console.log('resp', resp)
+          debugger
+          // console.log('resp', resp)
         )
     }
   },
