@@ -66,6 +66,16 @@ const routes = [
     path: '/user_registration',
     name: 'register for current season',
     component: () => import(/* webpackChunkName: "about" */ '../views/UserRegistrationView.vue')
+  },
+  {
+    path: '/rosters',
+    name: 'rosters',
+    component: () => import(/* webpackChunkName: "about" */ '../views/RostersView.vue')
+  },
+  {
+    path: '/schedule',
+    name: 'schedule',
+    component: () => import(/* webpackChunkName: "about" */ '../views/ScheduleView.vue')
   }
 ]
 
