@@ -51,6 +51,12 @@
             <p><router-link to="/user_registration" class="router-link-class">Register Here!</router-link></p>
           </div>
           <div class="nav-item">
+            <p><router-link to="/rosters" class="router-link-class">Rosters</router-link></p>
+          </div>
+          <div class="nav-item">
+            <p><router-link to="/schedule" class="router-link-class">Schedule</router-link></p>
+          </div>
+          <div class="nav-item">
             <p><router-link to="/scores" class="router-link-class">Scores</router-link></p>
           </div>
           <div class="nav-item">
