@@ -11,9 +11,8 @@
 
 <script>
 // @ is an alias to /src
-import axios from 'axios'
 import RegistrationsIndex from '@/components/RegistrationsIndex.vue'
-import { ApiUtilities } from '../../utils/ApiUtilities.js'
+import axios from 'axios'
 
 export default {
   name: 'RegistrationsView',
@@ -31,17 +30,16 @@ export default {
     async getRegistrations () {
       // console.log('token', this.user.token)
       await axios.get(process.env.VUE_APP_API_URL + '/user_registrations/1')
-        .then(resp =>
-        // { this.registrations = resp.data }
-          debugger
-          // console.log('resp', resp)
-        )
+        .then(resp => { this.registrations = resp.data })
     }
   },
   mounted () {
-    console.log('apiUtilities', ApiUtilities)
     // console.log('reg index mounted')
     this.getRegistrations()
+    // debugger
+  },
+  computed () {
+    console.log('dat', this.data)
   }
 }
 </script>
