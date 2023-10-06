@@ -1,6 +1,7 @@
 <template>
   <div class="dev">
     <h1>Fall 2023 Rosters</h1>
+    <h3><router-link to="/subs" class="router-link-class">Substitue List</router-link></h3>
     <table class="table table-bordered table-hover table-condensed">
 <thead><tr><th title="Field #1">Div1</th>
 <th title="Field #2">First</th>
@@ -416,6 +417,9 @@
 <td>ms97213@earthlink.net</td>
 </tr>
 </tbody></table>
+
+<br>
+
   </div>
 </template>
 

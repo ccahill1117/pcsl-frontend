@@ -1,101 +1,26 @@
 <template>
   <div class="dev">
     <h1>Fall 2023 Schedule</h1>
-    <h3>Round Robin 10/04</h3>
     <div class="centeredTable">
-      <table class="">
-      <thead><tr><th title="Field #1"></th>
-      <th title="Field #2"></th>
-      </tr></thead>
-      <tbody><tr>
-      <td>Mac (Courts 456)</td>
-      <td> 6:00</td>
-      </tr>
-      <tr>
-      <td>D1 </td>
-      <td>Team 2</td>
-      </tr>
-      <tr>
-      <td>D1 </td>
-      <td>Team 3</td>
-      </tr>
-      <tr>
-      <td> </td>
-      <td> </td>
-      </tr>
-      <tr>
-      <td>Mac (Courts 456)</td>
-      <td> 7:30</td>
-      </tr>
-      <tr>
-      <td>D1 </td>
-      <td>Team 4</td>
-      </tr>
-      <tr>
-      <td>D1 </td>
-      <td>Team 5</td>
-      </tr>
-      <tr>
-      <td> </td>
-      <td> </td>
-      </tr>
-      <tr>
-      <td>LAC (Cts 1/3 @ 6pm Ct2 @ 6:15)</td>
-      <td>6:00</td>
-      </tr>
-      <tr>
-      <td>D2 </td>
-      <td>Team 1</td>
-      </tr>
-      <tr>
-      <td>D2 </td>
-      <td>Team 5</td>
-      </tr>
-      <tr>
-      <td> </td>
-      <td> </td>
-      </tr>
-      <tr>
-      <td>LAC</td>
-      <td> 7:30</td>
-      </tr>
-      <tr>
-      <td>D2 </td>
-      <td>Team 3</td>
-      </tr>
-      <tr>
-      <td>D2 </td>
-      <td>Team 4</td>
-      </tr>
-      <tr>
-      <td> </td>
-      <td> </td>
-      </tr>
-      <tr>
-      <td>Reed</td>
-      <td>6:00</td>
-      </tr>
-      <tr>
-      <td>D2 </td>
-      <td>Team 2</td>
-      </tr>
-      <tr>
-      <td> </td>
-      <td> </td>
-      </tr>
-      <tr>
-      <td> </td>
-      <td> </td>
-      </tr>
-      <tr>
-      <td>Reed</td>
-      <td>7:30</td>
-      </tr>
-      <tr>
-      <td>D1 </td>
-      <td>Team 1</td>
-      </tr>
-      </tbody></table>
+      <div class="row"><div class="col-md-12"><div class="panel panel-success"><div class="panel-heading "><h3 class="panel-title"></h3>Week 1 - 10/11</div>
+<table border=1 class="table table-striped table-bordered table-hover table-condensed">
+<thead><tr><th title="Field #1">Div 1</th>
+<th title="Field #2">Div 2</th>
+</tr></thead>
+<tbody><tr><td>Team 1 BYE</td>
+<td>Team 1 BYE</td>
+</tr>
+<tr><td>Team 2 Vs Reed (Reed 7:30)</td>
+<td>Team 2 BYE</td>
+</tr>
+<tr><td>Team 3 Vs Team 5 (MAC 6:30)</td>
+<td>Team 3 Vs Reed (Reed 6:30)</td>
+</tr>
+<tr><td>Team 4 Vs Team 5 (Mac 6:30)</td>
+<td>Team 4 Vs Team 5 (Mac 7:30)</td>
+</tr>
+</tbody></table>
+</div></div></div>
     </div>
 
   </div>
