@@ -13,7 +13,7 @@
 <tr><td>Team 2 Vs Reed (Reed 7:30)</td>
 <td>Team 2 BYE</td>
 </tr>
-<tr><td>Team 3 Vs Team 5 (MAC 6:30)</td>
+<tr><td>Team 3 Vs Team 6 (MAC 6:30)</td>
 <td>Team 3 Vs Reed (Reed 6:30)</td>
 </tr>
 <tr><td>Team 4 Vs Team 5 (Mac 6:30)</td>
