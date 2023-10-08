@@ -2,7 +2,9 @@
   <div class="hi">
     <p>
       Current Registrations coming soon
-      {{ this.registrations }}
+      <!-- {{ _.filter (this.registrations, function(reg) {
+          return reg.user
+      }) }} -->
     </p>
   </div>
 </template>
@@ -21,7 +23,7 @@ export default {
   methods: {
   },
   mounted () {
-    console.log('reg index mounted')
+    // console.log('hihi', this.registrations)
   }
 }
 </script>
