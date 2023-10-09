@@ -8,9 +8,10 @@ loosely organized in a weekly competitive and social league format'"</i>
     <p>Tony Humpage - Founder</p>
     <h1>NEWS</h1>
 <hr />
-<p><em>Last updated: October 8, 2023</em></p>
+<p><em>Last updated: October 9, 2023</em></p>
 
-<h2><strong>Fall League 2023 is underway</strong></h2>
+<h2><strong>Fall League 2023 is underway - Week 1 Matches are this week, Weds 10/11</strong></h2>
+<p>Immediately following Week 1 matches on Wednesday evening, there will be a season opening party at Hot Lips Hawthorne, 2211 SE Hawthorne Blvd, Portland, OR 97214.</p>
 <p>Please see rosters <router-link to="/rosters">here</router-link> and schedule <router-link to="/schedule">here</router-link></p>
 
 <h2><strong>Oregon Open 2023</strong></h2>
