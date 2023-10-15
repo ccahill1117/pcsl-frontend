@@ -1,11 +1,10 @@
 <template>
   <div class="hi">
-    <p>
-      <!-- {{ _.filter (props.registrations, function(reg) {
-          return reg.user
-      }) }} -->
-      {{ registrations }}
-    </p>
+    <div v-for="reg in this.registrations" :key="reg.id">
+      <p>
+        {{ reg.attributes.user.first_name }}, {{ reg.attributes.user.last_name }}
+      </p>
+    </div>
   </div>
 </template>
 
@@ -20,12 +19,11 @@ export default {
   methods: {
   },
   mounted () {
+    console.log('aaaasdkahjsd', this.registrations)
   },
   computed: {
   }
-  // computed (props) {
-  //   console.log('hihi', props.registrations)
-  // }
+
 }
 </script>
 
