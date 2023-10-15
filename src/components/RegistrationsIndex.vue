@@ -4,7 +4,7 @@
       <!-- {{ _.filter (props.registrations, function(reg) {
           return reg.user
       }) }} -->
-      {{ this.registrations }}
+      {{ registrations }}
     </p>
   </div>
 </template>
@@ -14,10 +14,7 @@
 
 export default {
   name: 'RegistrationsIndex',
-  props: {
-    registrations: Array,
-    someProp: String
-  },
+  props: ['registrations'],
   data () {
   },
   methods: {
