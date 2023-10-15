@@ -1,10 +1,10 @@
 <template>
   <div class="hi">
     <p>
-      Current Registrations coming soon
-      <!-- {{ _.filter (this.registrations, function(reg) {
+      <!-- {{ _.filter (props.registrations, function(reg) {
           return reg.user
       }) }} -->
+      {{ this.registrations }}
     </p>
   </div>
 </template>
@@ -23,8 +23,12 @@ export default {
   methods: {
   },
   mounted () {
-    // console.log('hihi', this.registrations)
+  },
+  computed: {
   }
+  // computed (props) {
+  //   console.log('hihi', props.registrations)
+  // }
 }
 </script>
 

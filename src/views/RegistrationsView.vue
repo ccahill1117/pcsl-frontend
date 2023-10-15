@@ -2,8 +2,13 @@
   <div class="about">
     <h1>Current Registrations</h1>
     <p>Register for current season <router-link to="/user_registration">here</router-link></p>
+    <p>Regulars</p>
     <RegistrationsIndex
-      :registrations="this.registrations"
+      :registrations="this.regularRegistrations"
+    />
+    <p>Subs</p>
+    <RegistrationsIndex
+      :registrations="this.subRegistrations"
     />
     <!-- <p>{{ ApiUtilities }}</p> -->
   </div>
@@ -13,6 +18,7 @@
 // @ is an alias to /src
 import RegistrationsIndex from '@/components/RegistrationsIndex.vue'
 import axios from 'axios'
+// import _ from 'lodash'
 
 export default {
   name: 'RegistrationsView',
@@ -32,15 +38,20 @@ export default {
       await axios.get(process.env.VUE_APP_API_URL + '/user_registrations/1')
         .then(resp => { this.registrations = resp.data.data })
         // .then(resp => console.log('resp', JSON.stringify(resp.data.data)))
-      console.log('aa', this.registrations[0].attributes.user)
+      console.log('aa', this.registrations[0].attributes)
     }
   },
   mounted () {
     this.getRegistrations()
     // debugger
   },
-  computed () {
-    console.log('data!', this.registrations)
+  computed: {
+    regularRegistrations () {
+      return 'ha'
+    },
+    subRegistrations () {
+      return 'la'
+    }
   }
 }
 </script>
