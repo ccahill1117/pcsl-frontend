@@ -19,7 +19,7 @@
 import RegistrationsIndex from '@/components/RegistrationsIndex.vue'
 // import { ApiUtilities } from '../../utils/ApiUtilities.js'
 import axios from 'axios'
-// import _ from 'lodash'
+import _ from 'lodash'
 
 export default {
   name: 'RegistrationsView',
@@ -33,7 +33,7 @@ export default {
       await axios.get(process.env.VUE_APP_API_URL + '/user_registrations/1')
         .then(resp => { this.registrations = resp.data.data })
         // .then(resp => console.log('resp', JSON.stringify(resp.data.data)))
-      console.log('aa', this.registrations[0].attributes)
+      console.log('aa', (_.filter(this.registrations, reg => reg.attributes.regular === true)))
     }
   },
   mounted () {
