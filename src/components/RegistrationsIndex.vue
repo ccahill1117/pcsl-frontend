@@ -1,35 +1,29 @@
 <template>
   <div class="hi">
-    <p>
-      Current Registrations coming soon
-    </p>
-    <p>Register for current season <router-link to="/user_registration">here</router-link></p>
-    <!-- <p>drag and drop to reorder</p> -->
+    <div v-for="reg in this.registrations" :key="reg.id">
+      <p>
+        {{ reg.attributes.user.first_name }}, {{ reg.attributes.user.last_name }}
+      </p>
+    </div>
   </div>
 </template>
 
 <script>
-import axios from 'axios'
+// import axios from 'axios'
 
 export default {
   name: 'RegistrationsIndex',
-  props: {
-    registrations: Array,
-    someProp: String
+  props: ['registrations'],
+  data () {
   },
   methods: {
-    async getRegistrations () {
-      // console.log('token', this.user.token)
-      await axios.get(process.env.VUE_APP_API_URL + '/registrations')
-        .then(resp =>
-          console.log('resp', resp)
-        )
-    }
   },
   mounted () {
-    console.log('reg index mounted')
-    this.getRegistrations()
+    console.log('aaaasdkahjsd', this.registrations)
+  },
+  computed: {
   }
+
 }
 </script>
 
