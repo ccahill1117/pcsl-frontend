@@ -8,22 +8,11 @@ loosely organized in a weekly competitive and social league format'"</i>
     <p>Tony Humpage - Founder</p>
     <h1>NEWS</h1>
 <hr />
-<p><em>Last updated: October 9, 2023</em></p>
+<p><em>Last updated: December 6th, 2023</em></p>
 
-<h2><strong>Fall League 2023 is underway - Week 1 Matches are this week, Weds 10/11</strong></h2>
-<p>Immediately following Week 1 matches on Wednesday evening, there will be a season opening party at Hot Lips Hawthorne, 2211 SE Hawthorne Blvd, Portland, OR 97214.</p>
-<p>Please see rosters <router-link to="/rosters">here</router-link> and schedule <router-link to="/schedule">here</router-link></p>
-
-<h2><strong>Oregon Open 2023</strong></h2>
-<p><a target="_blank" href="https://www.psaworldtour.com/tournament/oregon-open-2023/">PSA Oregon Open</a> will take place at the MAC from 10/31 - 11/04. This is always a fantastic tournament. Make sure to come out and support local legends Mauricio Sanchez de la Paz, Phillip Carbajal, and Gordon Lam.</p>
-<img src=".././assets/OO2023.jpg" width="500">
-
-<h2><strong>Oregon State Squash Championships</strong></h2>
-
-<p>Signups for the 2023 Oregon State Championships are now live and you can sign up <a target="_blank" href="https://clublocker.com/tournaments/15075/info">HERE.</a> This year’s event takes place from November 3-5, and is hosted by Multnomah Athletic Club and Lloyd Athletic Club in Portland, OR.</p>
-
-<p>This event coincides with the PSA Oregon Open 2023 event and all Oregon State entrants will automatically have access to all PSA matches starting Oct 31 - Nov 4 at the Multnomah Athletic Club. Your $140 entry fee includes tournament entry, access to all PSA matches, Friday and Saturday night dinner, event swag and all weekend refreshments. Additional guests  may purchase a weekend pass to all matches, meals and refreshments for $50 when checking in for the event.</p>
-<img src=".././assets/ostatechamps2023.jpg" width="500">
+<h3>Fall League 2023 season ending party will take place <strong>  Weds, 12/6 at Hawthorne Hotlips</strong></h3>
+<p>Party to immediately follow matches!</p>
+<p>Address: 2211 SE Hawthorne Blvd, Portland, OR 97214.</p>
 <hr />
 
 <h3>ABOUT THE LEAGUE</h3>
