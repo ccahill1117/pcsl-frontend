@@ -11,17 +11,8 @@ loosely organized in a weekly competitive and social league format'"</i>
 <p><em>Last updated: December 7th, 2023</em></p>
 
 <h3>Fall League 2023 season has ended.</h3>
-<h2>Congrats to the winning teams!</h2>
-<p>Div 1</p>
-<ul>
-  <li>Team 1</li>
-  <li>Team 5</li>
-</ul>
-<p>Div 2</p>
-<ul>
-  <li>Team 3</li>
-  <li>Team 1</li>
-</ul>
+
+<h2>Stay tuned as registration for winter league to go out soon!</h2>
 <hr />
 
 <h3>ABOUT THE LEAGUE</h3>
