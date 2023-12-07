@@ -16,6 +16,8 @@ export default {
   props: ['registrations'],
   data () {
   },
+  data () {
+  },
   methods: {
   },
   mounted () {
