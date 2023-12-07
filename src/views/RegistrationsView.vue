@@ -48,7 +48,6 @@ export default {
   },
   computed: {
     regularRegistrations () {
-      // return 'ha'
       return (_.filter(this.registrations, reg => reg?.attributes?.regular === true))
     },
     subRegistrations () {
