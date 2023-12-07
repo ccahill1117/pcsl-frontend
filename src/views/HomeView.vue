@@ -8,11 +8,20 @@ loosely organized in a weekly competitive and social league format'"</i>
     <p>Tony Humpage - Founder</p>
     <h1>NEWS</h1>
 <hr />
-<p><em>Last updated: December 6th, 2023</em></p>
+<p><em>Last updated: December 7th, 2023</em></p>
 
-<h3>Fall League 2023 season ending party will take place <strong>  Weds, 12/6 at Hawthorne Hotlips</strong></h3>
-<p>Party to immediately follow matches!</p>
-<p>Address: 2211 SE Hawthorne Blvd, Portland, OR 97214.</p>
+<h3>Fall League 2023 season has ended.</h3>
+<h2>Congrats to the winning teams!</h2>
+<p>Div 1</p>
+<ul>
+  <li>Team 1</li>
+  <li>Team 5</li>
+</ul>
+<p>Div 2</p>
+<ul>
+  <li>Team 3</li>
+  <li>Team 1</li>
+</ul>
 <hr />
 
 <h3>ABOUT THE LEAGUE</h3>
