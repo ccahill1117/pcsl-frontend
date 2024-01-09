@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>Register Here for Fall 2023</h1>
+    <h1>Register Here for <u>Winter 2024</u></h1>
     <!-- <p>{{ ApiUtilities }}</p> -->
     <div v-if="submitSuccess === true">
       <p>thanks for registering!</p>
@@ -115,7 +115,7 @@ export default {
         rank: '',
         initials: '',
         // currently just hardcoding szn id
-        seasons_id: 1
+        seasons_id: 2
       },
       submitSuccess: false,
       error: false

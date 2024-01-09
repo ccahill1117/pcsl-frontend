@@ -8,11 +8,11 @@ loosely organized in a weekly competitive and social league format'"</i>
     <p>Tony Humpage - Founder</p>
     <h1>NEWS</h1>
 <hr />
-<p><em>Last updated: December 7th, 2023</em></p>
+<p><em>Last updated: January 9th, 2024</em></p>
 
-<h3>Fall League 2023 season has ended.</h3>
+<h3>Registration for <u>Winter League 2024</u> is now open.</h3>
 
-<h2>Stay tuned as registration for winter league to go out soon!</h2>
+<h3><router-link to="/user_registration" class="">Register Here!</router-link></h3>
 <hr />
 
 <h3>ABOUT THE LEAGUE</h3>
