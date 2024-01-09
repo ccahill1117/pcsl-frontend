@@ -2,15 +2,14 @@
   <div class="about">
     <h1>Current Registrations</h1>
     <p>Register for current season <router-link to="/user_registration">here</router-link></p>
-    <p>Regulars</p>
+    <h3>Regulars</h3>
     <RegistrationsIndex
       :registrations="this.regularRegistrations"
     />
-    <p>Subs</p>
+    <h3>Subs</h3>
     <RegistrationsIndex
       :registrations="this.subRegistrations"
     />
-    <!-- <p>{{ ApiUtilities }}</p> -->
   </div>
 </template>
 
