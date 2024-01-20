@@ -17,13 +17,13 @@ loosely organized in a weekly competitive and social league format'"</i>
 
 <h3>ABOUT THE LEAGUE</h3>
 <div>Portland City Squash League is an informal, volunteer supported organization of Squash Racquets enthusiasts. Participants are usually members of <a href="directions.php" target="_blank" alt="Athletic Clubs in Portland">athletic clubs</a> in Portland, OR, USA.</div>
-<p>There are three League seasons per year: <strong>Winter</strong>, running from late January through early May, <strong>Summer</strong>, running from June through mid-August and <strong>Fall</strong>, running from late September through early December. League membership is seasonal. Before each season begins, participants pay a fee to the League for that season. Play takes place at several participating clubs in the Portland area which make their courts available free of charge at specific times on Wednesday evenings when a season is underway. Looking for a sponsor athletic club with squash facilities ? Click on the club logos at top right of this page. <a href="contact.php">Join the League</a>.</p>
+<p>There are three League seasons per year: <strong>Winter</strong>, running from late January through early May, <strong>Summer</strong>, running from June through mid-August and <strong>Fall</strong>, running from late September through early December. League membership is seasonal. Before each season begins, participants pay a fee to the League for that season. Play takes place at several participating clubs in the Portland area which make their courts available free of charge at specific times on Wednesday evenings when a season is underway. Looking for a sponsor athletic club with squash facilities ? Click on the club logos at top right of this page. <a href="mailto:cthomascahill@gmail.com">Join the League</a>.</p>
 
 <h3>PORTLAND CITY SQUASH LEAGUE MAILING ADDRESS</h3>
 <div><strong>Portland City Squash League</strong></div>
 <div>307 SE 62nd Avenue</div>
 <div>Portland OR 97215 USA</div>
-<div>Email: <a href="mailto:membership@portlandsquash.org">membership@portlandsquash.org</a></div>
+<div>Email: <a href="mailto:cthomascahill@gmail.com">Portland City Squash League</a></div>
 
 <!-- <div id="column2_2"> -->
 <!-- <h2 style="margin: 1em 0;">CLUBS</h2> -->
