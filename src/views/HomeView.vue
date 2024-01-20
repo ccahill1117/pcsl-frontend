@@ -13,6 +13,8 @@ loosely organized in a weekly competitive and social league format'"</i>
 <h3>Registration for <u>Winter League 2024</u> is now open.</h3>
 
 <h3><router-link to="/user_registration" class="">Register Here!</router-link></h3>
+
+<p>Any issues with registration? Please <a href="mailto:cthomascahill@gmail.com">reach out</a></p>
 <hr />
 
 <h3>ABOUT THE LEAGUE</h3>
