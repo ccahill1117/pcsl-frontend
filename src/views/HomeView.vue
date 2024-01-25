@@ -8,13 +8,17 @@ loosely organized in a weekly competitive and social league format'"</i>
     <p>Tony Humpage - Founder</p>
     <h1>NEWS</h1>
 <hr />
-<p><em>Last updated: January 9th, 2024</em></p>
+<p><em>Last updated: January 24th, 2024</em></p>
 
 <h3>Registration for <u>Winter League 2024</u> is now open.</h3>
 
 <h3><router-link to="/user_registration" class="">Register Here!</router-link></h3>
 
 <p>Any issues with registration? Please <a href="mailto:cthomascahill@gmail.com">reach out</a></p>
+<hr />
+
+<p>Also coming up is the Rose City Classic tournament</p>
+
 <hr />
 
 <h3>ABOUT THE LEAGUE</h3>
