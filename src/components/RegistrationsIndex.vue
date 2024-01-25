@@ -1,31 +1,22 @@
 <template>
   <div class="hi">
-    <div v-for="reg in this.registrations" :key="reg.id">
-      <p>
-        {{ reg.attributes.user.first_name }}, {{ reg.attributes.user.last_name }} cpt? {{ reg.attributes.is_captain }}
-      </p>
-    </div>
-    <div>
-      <v-table :data="this.registrations">
-    <thead slot="head">
-        <th>Name</th>
-        <th>Age</th>
-        <th>Email</th>
-        <th>Address</th>
-    </thead>
-    <tbody slot="body" slot-scope="{displayData}">
-        <tr v-for="row in displayData" :key="row.id">
-          <td>{{ row.name }}</td>
-          <td>{{ row.age }}</td>
-          <td>{{ row.email }}</td>
-          <td>
-              {{ row.address.street }},
-              {{ row.address.city }}
-              {{ row.address.state}}
-          </td>
+    <div class="hi">
+      <table>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Captain?</th>
+          <th>Division</th>
+          <th>Rank</th>
         </tr>
-    </tbody>
-  </v-table>
+        <tr v-for="reg in this.registrations" :key="reg.id">
+          <td>{{ reg.attributes.user.first_name }}</td>
+          <td>{{ reg.attributes.user.last_name }}</td>
+          <td>{{ reg.attributes.is_captain }}</td>
+          <td>{{ reg.attributes.division }}</td>
+          <td>{{ reg.attributes.rank }}</td>
+        </tr>
+      </table>
     </div>
   </div>
 </template>
@@ -41,9 +32,10 @@ export default {
   methods: {
   },
   mounted () {
-    console.log('aaaasdkahjsd', this.registrations)
+    console.log('regs on index', this.registrations)
   },
   computed: {
+
   }
 
 }

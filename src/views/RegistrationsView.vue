@@ -40,7 +40,7 @@ export default {
         // .then(resp => { console.log('hihi', resp) })
         .then(resp => { this.registrations = resp.data.data })
       // .then(resp => console.log('resp', JSON.stringify(resp.data.data)))
-      console.log('aa', this.data.registrations)
+      // console.log('aa', this.data.registrations)
     }
   },
   mounted () {
