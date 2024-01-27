@@ -2,14 +2,20 @@
   <div class="about">
     <h1>Current Registrations</h1>
     <p>Register for current season <router-link to="/user_registration">here</router-link></p>
-    <h3>Regulars</h3>
-    <RegistrationsIndex
-      :registrations="this.regularRegistrations"
-    />
-    <h3>Subs</h3>
-    <RegistrationsIndex
-      :registrations="this.subRegistrations"
-    />
+    <div class="index">
+      <div>
+        <h3>Regulars</h3>
+        <RegistrationsIndex
+          :registrations="this.regularRegistrations"
+        />
+      </div>
+      <div>
+        <h3>Subs</h3>
+        <RegistrationsIndex
+          :registrations="this.subRegistrations"
+        />
+      </div>
+    </div>
     <!-- <p>{{ ApiUtilities }}</p> -->
   </div>
 </template>
@@ -57,3 +63,13 @@ export default {
   }
 }
 </script>
+
+<style>
+.index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+</style>
