@@ -19,7 +19,8 @@ loosely organized in a weekly competitive and social league format'"</i>
 <p>Any issues with registration? Please <a href="mailto:cthomascahill@gmail.com">reach out</a></p>
 <hr />
 
-<p>Also coming up is the Rose City Classic tournament</p>
+<p>Also coming up is the Rose City Classic tournament - running from 3/1 to 3/3</p>
+<p><a href="https://clublocker.com/tournaments/15960/info">Sign up by Feb 23, 8:30pm </a></p>
 
 <hr />
 
