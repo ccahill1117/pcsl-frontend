@@ -91,6 +91,7 @@
 
 import axios from 'axios'
 import { mapMutations } from 'vuex'
+import update from './mixins/update'
 
 console.log('env', process.env)
 export default {
@@ -106,6 +107,9 @@ export default {
       currentUserResponse: null
     }
   },
+  // mixin for updating pushed code
+  mixins: [update],
+
   mounted () {
     // this.getUser()
     console.log('user', this.user?.user)
