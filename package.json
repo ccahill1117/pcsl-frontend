@@ -50,7 +50,8 @@
     },
     "rules": {
       "vue/no-deprecated-slot-attribute": "off",
-      "vue/no-deprecated-slot-scope-attribute": "off"
+      "vue/no-deprecated-slot-scope-attribute": "off",
+      "no-tabs": "off"
     }
   },
   "browserslist": [
