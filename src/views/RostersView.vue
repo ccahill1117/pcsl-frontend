@@ -534,6 +534,12 @@
 <td style="border-right: 1px solid #000000; border-bottom: 1px solid #000000; overflow: hidden; padding: 0px 3px 0px 3px; vertical-align: top; font-family: Montserrat; font-weight: bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Ryan&quot;}">Ryan</td>
 <td style="border-right: 1px solid #000000; border-bottom: 1px solid #000000; overflow: hidden; padding: 0px 3px 0px 3px; vertical-align: top; font-family: Montserrat; font-weight: bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Moskal&quot;}">Moskal</td>
 </tr>
+<tr style="height: 20px;">
+<td style="border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; overflow: hidden; padding: 0px 3px 0px 3px; vertical-align: top; background-color: #ffffff; font-family: Montserrat; font-weight: bold; text-align: right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:2}">2</td>
+<td style="border-right: 1px solid #000000; border-bottom: 1px solid #000000; overflow: hidden; padding: 0px 3px 0px 3px; vertical-align: top; font-family: Montserrat; font-weight: bold; text-align: right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:5}">5</td>
+<td style="border-right: 1px solid #000000; border-bottom: 1px solid #000000; overflow: hidden; padding: 0px 3px 0px 3px; vertical-align: top; font-family: Montserrat; font-weight: bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Ryan&quot;}">Quinn</td>
+<td style="border-right: 1px solid #000000; border-bottom: 1px solid #000000; overflow: hidden; padding: 0px 3px 0px 3px; vertical-align: top; font-family: Montserrat; font-weight: bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Moskal&quot;}">Hatcher-Ross</td>
+</tr>
 </tbody>
 </table>
 <p>&nbsp;</p>

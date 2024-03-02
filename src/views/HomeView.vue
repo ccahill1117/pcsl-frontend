@@ -19,11 +19,6 @@ loosely organized in a weekly competitive and social league format'"</i>
 <p>Any issues with registration? Please <a href="mailto:cthomascahill@gmail.com">reach out</a></p>
 <hr />
 
-<p>Coming up is the Rose City Classic tournament - running from 3/1 to 3/3</p>
-<p><a href="https://clublocker.com/tournaments/15960/info">Sign up DEADLINE: Feb 23, 8:30pm </a></p>
-
-<hr />
-
 <h3>ABOUT THE LEAGUE</h3>
 <div>Portland City Squash League is an informal, volunteer supported organization of Squash Racquets enthusiasts. Participants are usually members of <a href="directions.php" target="_blank" alt="Athletic Clubs in Portland">athletic clubs</a> in Portland, OR, USA.</div>
 <p>There are three League seasons per year: <strong>Winter</strong>, running from late January through early May, <strong>Summer</strong>, running from June through mid-August and <strong>Fall</strong>, running from late September through early December. League membership is seasonal. Before each season begins, participants pay a fee to the League for that season. Play takes place at several participating clubs in the Portland area which make their courts available free of charge at specific times on Wednesday evenings when a season is underway. Looking for a sponsor athletic club with squash facilities ? Click on the club logos at top right of this page. <a href="mailto:cthomascahill@gmail.com">Join the League</a>.</p>
