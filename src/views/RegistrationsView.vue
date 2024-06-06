@@ -34,15 +34,14 @@ export default {
   },
   data () {
     return {
-      registrations: [],
-      um: 'hi'
+      registrations: []
     }
   },
   methods: {
     // methods
     async getRegistrations () {
       // console.log('token', this.user.token)
-      await axios.get(process.env.VUE_APP_API_URL + '/user_registrations/1')
+      await axios.get(process.env.VUE_APP_API_URL + '/user_registrations/5')
         // .then(resp => { console.log('hihi', resp) })
         .then(resp => { this.registrations = resp.data.data })
       // .then(resp => console.log('resp', JSON.stringify(resp.data.data)))

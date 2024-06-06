@@ -8,11 +8,9 @@ loosely organized in a weekly competitive and social league format'"</i>
     <p>Tony Humpage - Founder</p>
     <h1>NEWS</h1>
 <hr />
-<p><em>Last updated: February 16, 2024</em></p>
+<p><em>Last updated: June 5, 2024</em></p>
 
-<h3>Registration for <u>Winter League 2024</u> is now closed.</h3>
-
-<h3>You can still register as a sub below.</h3>
+<h3>Registration for <u>Summer League 2024</u> is now open.</h3>
 
 <h3><router-link to="/user_registration" class="">Register Here!</router-link></h3>
 
